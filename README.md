@@ -1,1 +1,3 @@
-Equipment Storage and Rental.
+Equipment Rental Software.
+
+Basic management software to help businesses manage their inventory, orders and customers.
