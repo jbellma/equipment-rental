@@ -4,8 +4,8 @@ The goal of this project is to help me put into practice the core concepts learn
 
 The project will be divided into three PHASES in order to simplify the task into a series of logical and manageable steps.
 
-PHASE ONE:
+Phase 1: Main program menu and data entry.
 
-PHASE TWO:
+Phase 2: Structuring the code into functions and data validation.
 
-PHASE THREE:
+Phase 3: Catalog of products, services and contrats.
