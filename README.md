@@ -1,3 +1,11 @@
-Equipment Rental Software.
+Equipment Storage and Rental.
 
-Basic management software to help businesses manage their inventory, orders and customers.
+The goal of this project is to help me put into practice the core concepts learned in Python, by implementing a real and practical case. A basic management software to help businesses manage their inventory, orders and customers.
+
+The project will be divided into three PHASES in order to simplify the task into a series of logical and manageable steps.
+
+PHASE ONE:
+
+PHASE TWO:
+
+PHASE THREE:
