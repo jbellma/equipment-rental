@@ -38,11 +38,11 @@ The user (a worker form the company) will be asked to choose an option from the 
     option 3 → will print **“NEW LIFTING EQUIPMENT RENTAL”** . 
   - Option 4 in particular → will print **"EXIT"** and will end the program.
   
-  ---
+---
  
 #### TASK 2: New Lifting Equipment
 As part of this task, the company's worker will enter the following data on new lifting equipment that the company has recently acquired:
-* Lifting equipment identifier: sequential number given to every single piece of equipment owned by the company (No two pieces of equipment may share the same     
+* Lifting equipment identifier: sequential number given to every single piece of equipment owned by the company (no two pieces of equipment may share the same     
   identifier).
   
 
