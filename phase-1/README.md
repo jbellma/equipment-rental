@@ -15,8 +15,8 @@ The project will be divided into three ***phases*** in order to simplify the tas
 ---
 
 ### Phase 1 Tasks to be Completed
-1. Main Program Menu of the application will be printed.
-2. New products may also be introduced in the catalogue.
+- Task 1: Main Program Menu of the application will be printed.
+- Task 2: New products may also be introduced in the catalogue.
 
 #### TASK 1: Printing the menu
 When running the application, the following menu will appear on the screen (standard output).
@@ -30,7 +30,20 @@ When running the application, the following menu will appear on the screen (stan
 
                                           Please select an option (1-4):
 
-The user will be asked to choose an option from the menu, "Please select an option (1-4):" 
-* If the user selects an invalid option, the message "Error: invalid option" will appear on the screen (value that differs   from the permissible values between 1-4).
+The user (a worker form the company) will be asked to choose an option from the menu,**"Please select an option (1-4):"**
+* If the user selects an invalid option ( a value that differs from the permissible values between 1-4), the message **"Error: invalid option"** will appear on the       screen.
+* If any valid option is selected, the following will happen:
+  - Depending on the option inserted by the user, the name of the option selected for execution is displayed and executed. For example, if the user selects option 1,       the output will be: **"NEW LIFTING EQUIPMENT"** and the corresponding ***task 2*** is executed.
+  - If the user choses any other option (2-4), since there are no tasks associated, only the option to be executed will be printed. For example, the
+    option 3 → will print **“NEW LIFTING EQUIPMENT RENTAL”** . 
+  - Option 4 in particular → will print **"EXIT"** and will end the program.
+  
+  ---
+ 
+#### TASK 2: New Lifting Equipment
+As part of this task, the company's worker will enter the following data on new lifting equipment that the company has recently acquired:
+* Lifting equipment identifier: sequential number given to every single piece of equipment owned by the company (No two pieces of equipment may share the same     
+  identifier).
+  
 
 
