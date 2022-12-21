@@ -10,15 +10,17 @@ The project will be divided into three ***phases*** in order to simplify the tas
 
 - Phase 1: Main program menu and data entry.
 - Phase 2: Structuring the code into functions and data validation.
-- Phase 3: Catalog of products, services and contracts.
+- Phase 3: Catalogue of products, services and contracts.
 
 ---
 
 ### Phase 1 Tasks to be Completed
-- Task 1: Main Program Menu of the application will be printed.
-- Task 2: New products may also be introduced in the catalogue.
+- Task 1: Main Program Menu will appear on screen.
+- Task 2: New products can be added to the catalogue.
 
-#### TASK 1: Printing the menu
+---
+
+### TASK 1: Printing the menu
 When running the application, the following menu will appear on the screen (standard output).
 
 
@@ -40,10 +42,16 @@ The user (a worker form the company) will be asked to choose an option from the 
   
 ---
  
-#### TASK 2: New Lifting Equipment
+### TASK 2: New Lifting Equipment
 As part of this task, the company's worker will enter the following data on new lifting equipment that the company has recently acquired:
-* Lifting equipment identifier: sequential number given to every single piece of equipment owned by the company (no two pieces of equipment may share the same     
-  identifier).
+* ***Lifting equipment identifier:*** sequential number given to every single piece of equipment owned by the company (no two  
+  pieces of equipment may share the same identifier).
+* ***Brand:***  Equipment's brand.
+* ***Model:***  Equipment's specific model. Usually an alphanumeric string.
+* ***Type:***  Lifting equipment type.
+* ***Description:***  Lifting equipment description.
+* ***Price before VAT:***  Purchase cost to the company.
+* ***Number of units in stock:***  Number of pieces of this equipment owned by the company.
   
 
 
