@@ -32,7 +32,7 @@ elif option==1:
     equipment_units_in_stock = int(input("Please specify the number of lifting equipment units that are currently in stock: "))
     if (equipment_units_in_stock < 0): # Verifies whether the provided number is negative. If the result is negative, an error message is displayed on the screen.
         equipment_units_in_stock = 0   # Default value used to either confirm or indicate that the information entered is incorrect.
-        print("Error, Negative stock numbers are not permitted")
+        print("Error, negative stock numbers are not permitted")
 
 elif option==2:
     print("NEW CUSTOMER")
