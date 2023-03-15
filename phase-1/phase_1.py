@@ -1,7 +1,7 @@
 # Constants
 VAT = 16  # consistently 16% VAT on all items
 
-# Prints Main Menu
+# Prints Main Menu.
 print("\n\n\n")
 print("******** MAIN MENU ********")
 print("1. New Lifting Equipment")
@@ -33,6 +33,20 @@ elif option==1:
     if (equipment_units_in_stock < 0): # Verifies whether the provided number is negative. If the result is negative, an error message is displayed on the screen.
         equipment_units_in_stock = 0   # Default value used to either confirm or indicate that the information entered is incorrect.
         print("Error, negative stock numbers are not permitted")
+
+    # Prints the saved data.
+    print ("\n\n\n")
+
+    print("*** EQUIPMENT DATA ***")
+    print("ID: ", equipment_id)
+    print("Brand: ", equipment_brand)
+    print("Model: ", equipment_model)
+    print("Type: ", equipment_type)
+    print("Description: ", equipment_description)
+    print("Price before VAT: ", equipment_price_before_vat)
+    print("Price after VAT: ", equipment_price_after_vat)
+
+
 
 elif option==2:
     print("NEW CUSTOMER")
