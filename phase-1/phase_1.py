@@ -25,6 +25,9 @@ elif option==1:
     equipment_type = input("Please specify the equipment type: ")
     equipment_description = input("Please enter the lifting equipment's description here: ")
     equipment_price_before_vat = int(input("Please input the cost of the lifting equipment, excluding VAT: "))
+    if (equipment_price_before_vat < 0): # Verifies whether the provided price is negative. If the result is negative, an error message is displayed on the screen.
+        equipment_price_before_vat = 0 # Default value used to either confirm or indicate that the information entered is incorrect.
+        print("Error, negative pricing are prohibited ")
     equipment_price_after_vat = equipment_price_before_vat + equipment_price_before_vat*(VAT/100)
     equipment_units_in_stock = int(input("Please specify the number of lifting equipment units that are currently in stock: "))
 
