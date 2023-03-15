@@ -19,10 +19,10 @@ if option<1 or option>4:
 elif option==1:
     print("New Lifting Equipment")
     equipment_id = int(input("Please provide the identifier for the lifting equipment: "))
-    equipment_brand = int(input("Please provide the lifting equipment's brand name: "))
-    equipment_model = int(input("Please specify the model's name of the lifting apparatus: "))
-    equipment_type = int(input("Please specify the equipment type: "))
-    equipment_description = int(input("Please enter the lifting equipment's description here: "))
+    equipment_brand = input("Please provide the lifting equipment's brand name: ")
+    equipment_model = input("Please specify the model's name of the lifting apparatus: ")
+    equipment_type = input("Please specify the equipment type: ")
+    equipment_description = input("Please enter the lifting equipment's description here: ")
     equipment_price_before_vat = int(input("Please input the cost of the lifting equipment, excluding VAT: "))
     equipment_units_in_stock = int(input("Please specify the number of lifting equipment units that are currently in stock: "))
 elif option==2:
