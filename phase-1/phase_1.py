@@ -20,7 +20,10 @@ if option<1 or option>4:
 elif option==1:
     print("NEW LIFTING EQUIPMENT")
     equipment_id = int(input("Please provide the identifier for the lifting equipment: "))
-    equipment_brand = input("Please provide the lifting equipment's brand name: ")
+    equipment_brand = input("Please provide the lifting equipment's brand name (PALFINGER, KONE or SCHMALZ): ")
+    if equipment_brand != "PALFINGER" and equipment_brand != "KONE" and equipment_brand != "SCHMALZ":
+        equipment_brand = "unkown"  # Default value used to either confirm or indicate that the information entered is incorrect.
+        print("Error, brand not permitted")
     equipment_model = input("Please specify the model's name of the lifting apparatus: ")
     equipment_type = input("Please specify the equipment type: ")
     equipment_description = input("Please enter the lifting equipment's description here: ")
