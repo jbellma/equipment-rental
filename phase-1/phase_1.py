@@ -14,10 +14,12 @@ option = int(input("Please select an option (1-4): "))
 
 # It displays an error message if the option that was entered is invalid.
 if option<1 or option>4:
+    print("\n\n\n")
     print("Error: invalid option")
 
 # Prints the name of the option to run and calls the function it references if the inserted option is valid.
 elif option==1:
+    print("\n\n\n")
     print("NEW LIFTING EQUIPMENT")
     equipment_id = int(input("Please provide the identifier for the lifting equipment: "))
     equipment_brand = input("Please provide the lifting equipment's brand name (PALFINGER, KONE or SCHMALZ): ")
@@ -39,7 +41,6 @@ elif option==1:
 
     # Prints the saved data.
     print ("\n\n\n")
-
     print("*** EQUIPMENT DATA ***")
     print("ID: ", equipment_id)
     print("Brand: ", equipment_brand)
@@ -52,10 +53,13 @@ elif option==1:
 
 
 elif option==2:
+    print("\n\n\n")
     print("NEW CUSTOMER")
 
 elif option==3:
+    print("\n\n\n")
     print("NEW LIFTING EQUIPMENT RENTAL")
 
 elif option==4:
+    print("\n\n\n")
     print("EXIT")
