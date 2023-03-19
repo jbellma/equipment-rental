@@ -59,11 +59,11 @@ The only brands allowed so far are ***PALFINGER***, ***KONE***, and ***SCHMALZ**
 After requesting all data, the application will display all the stored data as follows:
 
 				         ### NEW LIFTING EQUIPMENT DATA ###
-					 ID:234
-					 Brand: SCHMALZ
-					 Model: SM 100.2
-					 Type: Caterpillar crane
-					 Description: Crane with exceptional off-road mobility
-					 Price before VAT: 100000
-					 Price after VAT: 116000.0
-					 Stock: 5	
+					 ID:  234
+					 Brand:  SCHMALZ
+					 Model:  SM 100.2
+					 Type:  Caterpillar crane
+					 Description:  Crane with exceptional off-road mobility
+					 Price before VAT:  100000
+					 Price after VAT:  116000.0
+					 Stock:  5	
