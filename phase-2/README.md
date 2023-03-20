@@ -39,30 +39,30 @@ Moreover, the user must submit the following information when adding new custome
 ---
                                                       
                                                       
-                           Please, select an option (1-4):  2
+                                                 Please, select an option (1-4):  2
                            
-                           Type new customer's name:  Michael
+                                                 Enter new customer's name:  Michael
                            
-                           Type new customer's first surname:  Rodgers
+                                                 Fill in new customer's first surname:  Rodgers
                            
-                           Type new customer's second surname:  Martinez
+                                                 Complete new customer's second surname:  Martinez
                            
-                           Type new customer's NID with a 'NNNNNNNNL' format:  6273514H
-                           NID 6273514H is not valid
+                                                 Enter new customer's NID with a 'NNNNNNNNL' format:  6273514H
+                                                 NID 6273514H is not valid
                            
-                           Type new customer's NID with a 'NNNNNNNNL' format:  31734403S
+                                                 Type new customer's NID with a 'NNNNNNNNL' format:  31734403S
                            
-                           Type new customer's phone number:  913526271
+                                                 Enter new customer's phone number:  913526271
                            
-                           Type new customer's address:  Mount Avenue, 1  
+                                                 Fill in new customer's address:  Mount Avenue, 1  
                            
-                           ### CUSTOMER DATA ### 
-                           Name:  Michael
-                           First Surname:  Rodgers
-                           Second Surname:  Martinez
-                           NID:  31734403S
-                           Phone Number:  913526271
-                           Address:  Mount Avenue, 1
+                                                 ### CUSTOMER DATA ### 
+                                                 Name:  Michael
+                                                 First Surname:  Rodgers
+                                                 Second Surname:  Martinez
+                                                 NID:  31734403S
+                                                 Phone Number:  913526271
+                                                 Address:  Mount Avenue, 1
                                                    
 
 
@@ -81,24 +81,24 @@ At the very least, we'll implement the following features:
 
 ---
 
-                                                      ### EQUIPMENT DATA ###
-                                                      ID:  1
-                                                      Brand: PALFINGER
-                                                      Model:  SM 100.2
-                                                      Type: Caterpillar crane
-                                                      Description:  Crane with exceptional off-road mobility
-                                                      Price before VAT:  350.2
-                                                      Price after VAT:  406.23199999999997
-                                                      Stock :  4                                       
+                                                  ### EQUIPMENT DATA ###
+                                                  ID:  1
+                                                  Brand: PALFINGER
+                                                  Model:  SM 100.2
+                                                  Type: Caterpillar crane
+                                                  Description:  Crane with exceptional off-road mobility
+                                                  Price before VAT:  350.2
+                                                  Price after VAT:  406.23199999999997
+                                                  Stock :  4                                       
 ---
                                            
-                                                      ### CUSTOMER DATA ###
-                                                      Name:  Michael
-                                                      First Surname:  Rodgers
-                                                      Second Surname:  Martinez
-                                                      NID:  31734403S
-                                                      Phone Number:  913526271
-                                                      Address:  Mount Avenue, 1
+                                                  ### CUSTOMER DATA ###
+                                                  Name:  Michael
+                                                  First Surname:  Rodgers
+                                                  Second Surname:  Martinez
+                                                  NID:  31734403S
+                                                  Phone Number:  913526271
+                                                  Address:  Mount Avenue, 1
                                   
 ---
                                              
