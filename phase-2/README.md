@@ -36,7 +36,7 @@ Moreover, the user must submit the following information when adding new custome
 - ***Phone***: All phones will be stored as 9-digit integer numbers
 - ***Address***:
 
----
+
                                                       
                                                       
                                                  Please, select an option (1-4):  2
@@ -79,7 +79,7 @@ At the very least, we'll implement the following features:
 - A function that repeatedly requests a genuine number from the user until it receives it.
 - A function that shows all the information for a piece of lifting gear and another function that shows all the information for a particular client
 
----
+
 
                                                   ### EQUIPMENT DATA ###
                                                   ID:  1
@@ -90,7 +90,7 @@ At the very least, we'll implement the following features:
                                                   Price before VAT:  350.2
                                                   Price after VAT:  406.23199999999997
                                                   Stock :  4                                       
----
+
                                            
                                                   ### CUSTOMER DATA ###
                                                   Name:  Michael
@@ -100,7 +100,7 @@ At the very least, we'll implement the following features:
                                                   Phone Number:  913526271
                                                   Address:  Mount Avenue, 1
                                   
----
+
                                              
                                              
 
