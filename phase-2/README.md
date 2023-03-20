@@ -52,24 +52,24 @@ At the very least, we'll implement the following features:
 
 ---
 
-                                  ### EQUIPMENT DATA ###
-                                  ID:  1
-                                  Brand: PALFINGER
-                                  Model:  SM 100.2
-                                  Type: Caterpillar crane
-                                  Description:  Crane with exceptional off-road mobility
-                                  Price before VAT:  350.2
-                                  Price after VAT:  406.23199999999997
-                                  Stock :  4                                       
+                                                      ### EQUIPMENT DATA ###
+                                                      ID:  1
+                                                      Brand: PALFINGER
+                                                      Model:  SM 100.2
+                                                      Type: Caterpillar crane
+                                                      Description:  Crane with exceptional off-road mobility
+                                                      Price before VAT:  350.2
+                                                      Price after VAT:  406.23199999999997
+                                                      Stock :  4                                       
 ---
                                            
-                                  ### CUSTOMER DATA ###
-                                  Name:  Michael
-                                  First Surname:  Rodgers
-                                  Second Surname:  Martinez
-                                  NID:  31734403S
-                                  Phone Number:  913526271
-                                  Address:  Mount Avenue, 1
+                                                      ### CUSTOMER DATA ###
+                                                      Name:  Michael
+                                                      First Surname:  Rodgers
+                                                      Second Surname:  Martinez
+                                                      NID:  31734403S
+                                                      Phone Number:  913526271
+                                                      Address:  Mount Avenue, 1
                                   
 ---
                                              
