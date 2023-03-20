@@ -53,7 +53,7 @@ As part of this task, the company's worker will enter the following data on new 
 * ***Price before VAT:***  Purchase cost to the company.
 * ***Number of units in stock:***  Number of pieces of this equipment owned by the company.
 
-The only brands allowed so far are ***PALFINGER***, ***KONE***, and ***SCHMALZ***. The variable would automatically be assigned the value "unknown" if the user entered any other brand and the error message "Error, brand not allowed" would be printed out. It will be assumed that the user provides the data in the precise format that it appears in the statement (in uppercase). All other items will not be permitted.  
+The only brands allowed so far are ***PALFINGER***, ***KONE***, and ***SCHMALZ***. The variable would automatically be assigned the value "***unknown***" if the user entered any other brand and the error message "***Error, brand not allowed***" would be printed out. It will be assumed that the user provides the data in the precise format that it appears in the statement (in uppercase). All other items will not be permitted.  
 
 
 After requesting all data, the application will display all the stored data as follows:
