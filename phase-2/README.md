@@ -36,6 +36,35 @@ Moreover, the user must submit the following information when adding new custome
 - ***Phone***: All phones will be stored as 9-digit integer numbers
 - ***Address***:
 
+---
+                                                      
+                                                      
+                           Please, select an option (1-4):  2
+                           
+                           Type new customer's name:  Michael
+                           
+                           Type new customer's first surname:  Rodgers
+                           
+                           Type new customer's second surname:  Martinez
+                           
+                           Type new customer's NID with a 'NNNNNNNNL' format:  6273514H
+                           NID 6273514H is not valid
+                           
+                           Type new customer's NID with a 'NNNNNNNNL' format:  31734403S
+                           
+                           Type new customer's phone number:  913526271
+                           
+                           Type new customer's address:  Mount Avenue, 1  
+                           
+                           ### CUSTOMER DATA ### 
+                           Name:  Michael
+                           First Surname:  Rodgers
+                           Second Surname:  Martinez
+                           NID:  31734403S
+                           Phone Number:  913526271
+                           Address:  Mount Avenue, 1
+                                                   
+
 
 ---
 
