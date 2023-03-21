@@ -1,22 +1,57 @@
 # Constants
 VAT = 16  # consistently 16% VAT on all items
 
-# Prints Main Menu.
-print("\n\n\n")
-print("******** MAIN MENU ********")
-print("1. New Lifting Equipment")
-print("2. New Customer")
-print("3. New Lifting Equipment Rental")
-print("4. Exit")
+###########################
 
-# It prompts the user to choose one of the Main Menu choices between one and four to be executed.
-option = int(input("Please select an option (1-4): "))
+    # Functions
 
-# It displays an error message if the option that was entered is invalid.
-if option<1 or option>4:
+###########################
+
+
+
+def PrintMenu():
     print("\n\n\n")
-    print("Error: invalid option")
+    print("******** MAIN MENU ********")
+    print("1. New Lifting Equipment")
+    print("2. New Customer")
+    print("3. New Lifting Equipment Rental")
+    print("4. Exit")
 
+    # It prompts the user to choose one of the Main Menu choices between one and four to be executed.
+    option = read_whole_positive("Please select an option (1-4): ")
+
+    # It displays an error message if the option that was entered is invalid.
+    while option<1 or option>4:
+        print("\n\n\n")
+        print("Error: invalid option")
+        option = read_whole_positive("Please select an option (1-4): ")
+    return option
+
+def read_whole_positive(message):
+    while True:
+        entry = input(message)
+    try:
+        entry = int(entry)
+        if entry<0:
+            raise ValueError
+        return entry
+    except ValueError:
+        print("Error, please enter a whole positive number")
+
+
+
+
+###########################
+
+    # Main Program
+
+###########################
+
+# Constants
+VAT = 16  # consistently 16% VAT on all items
+num_ID = 0
+
+option =
 # Prints the name of the option to run and calls the function it references if the inserted option is valid.
 elif option==1:
     print("\n\n\n")
