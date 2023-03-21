@@ -6,8 +6,6 @@
 
 ###########################
 
-
-
 def print_menu():
     print("\n\n\n")
     print("******** MAIN MENU ********")
@@ -16,12 +14,9 @@ def print_menu():
     print("3. New Lifting Equipment Rental")
     print("4. Exit")
 
-    # It prompts the user to choose one of the Main Menu choices between one and four to be executed.
-    option = read_whole_positive("Please select an option (1-4): ")
 
-    # It displays an error message if the option that was entered is invalid.
+    option = read_whole_positive("Please select an option (1-4): ")
     while option<1 or option>4:
-        print("\n\n\n")
         print("Error: invalid option")
         option = read_whole_positive("Please select an option (1-4): ")
     return option
@@ -29,28 +24,37 @@ def print_menu():
 def read_whole_positive(message):
     while True:
         entry = input(message)
-    try:
-        entry = int(entry)
-        if entry<0:
-            raise ValueError
-        return entry
-    except ValueError:
-        print("Error, please enter a whole positive number")
+        try:
+            entry = int(entry)
+            if entry<0:
+                raise ValueError
+            return entry
+        except ValueError:
+            print("Error, please enter a whole positive number")
 
+def leerRealPositivo(message):
+   while True:
+       entry = input(message)
+       try:
+           entry = float(entry)
+           if entry < 0:
+               raise ValueError
+           return entry
+       except ValueError:
+           print ("Error, please enter a real positive number: ")
 
-def insert_new_lifting_equipment():
-    equipment_id = int(input("Please provide the identifier for the lifting equipment: "))
+def insert_new_lifting_equipment(equipment_id):
+    equipment_id =  equipment_id + 1
     equipment_brand = input("Please provide the lifting equipment's brand name (PALFINGER, KONE or SCHMALZ): ")
     equipment_model = input("Please specify the model's name of the lifting apparatus: ")
     equipment_type = input("Please specify the equipment type: ")
     equipment_description = input("Please enter the lifting equipment's description here: ")
     equipment_price_before_vat = int(input("Please input the cost of the lifting equipment, excluding VAT: "))
     equipment_price_after_vat = equipment_price_before_vat + equipment_price_before_vat*(VAT/100)
-    equipment_units_in_stock = int(input("Please specify the number of lifting equipment units that are currently in stock: "))
-    return (equipment_id, equipment_brand, equipment_model, equipment_type, equipment_description, equipment_price_after_vat, equipment_units_in_stock )
+    equipment_units_in_stock = read_whole_positive("Please specify the number of lifting equipment units that are currently in stock: ")
+    return (equipment_id, equipment_brand, equipment_model, equipment_type, equipment_description, equipment_price_after_vat, equipment_price_after_vat, equipment_units_in_stock)
 
-# Prints the saved data.
-def print_new_lifting_equipment():
+def print_new_lifting_equipment(equipment_id, equipment_brand, equipment_model, equipment_type, equipment_description, equipment_price_before_vat, equipment_price_after_vat, equipment_units_in_stock):
     print ("\n\n\n")
     print("*** EQUIPMENT DATA ***")
     print("ID: ", equipment_id)
@@ -60,14 +64,24 @@ def print_new_lifting_equipment():
     print("Description: ", equipment_description)
     print("Price before VAT: ", equipment_price_before_vat)
     print("Price after VAT: ", equipment_price_after_vat)
+    print("Stock: ", equipment_units_in_stock)
 
 def insert_new_customer():
+    name = input("Enter new customer's name: ")
+    first_surname = input("Fill in new customer's first surname: ")
+    second_surname = input("Complete new customer's second surname: ")
+    nid = input("Enter new customer's NID with a 'NNNNNNNNL' format: ")
+    phone = input("Type new customer's phone number: ")
+    address = input("Fill in new customer's address: ")
+    return (name, first_surname, second_surname, nid, phone, address)
 
-def print_new_customer():
-
-
-
-
+def print_new_customer(name, first_surname, second_surname, nid, phone, address):
+    print ("\n\n\n")
+    print ("Name: ", name)
+    print ("First Surname: ", first_surname)
+    print ("Second Surname: ", second_surname)
+    print ("NID: ", nid)
+    print ("Address: ", address)
 
 
 ###########################
@@ -83,18 +97,21 @@ num_ID = 0
 
 option = print_menu()
 while option !=4:
-
-    if option==1:
+    if option == 1:
         print("\n\n\n")
         print("NEW LIFTING EQUIPMENT")
-        insert_new_lifting_equipment()
-        print_new_lifting_equipment()
+        (iden, bra, mod, typ, des, b_vat, af_vat, sto) = insert_new_lifting_equipment(num_ID)
+        print_new_lifting_equipment(iden, bra, mod, typ, des, b_vat, af_vat, sto)
 
-    elif option==2:
+        num_ID = num_ID + 1
+
+    elif option == 2 :
         print("\n\n\n")
         print("NEW CUSTOMER")
+        (name, first_sur, second_sur, nid, phon, addre) = insert_new_customer()
+        print_new_customer(name, first_sur, second_sur, nid, phon, addre)
 
-    elif option==3:
+    elif option == 3:
         print("\n\n\n")
         print("NEW LIFTING EQUIPMENT RENTAL")
 
