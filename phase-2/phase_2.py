@@ -9,7 +9,7 @@ VAT = 16  # consistently 16% VAT on all items
 
 
 
-def PrintMenu():
+def print_menu():
     print("\n\n\n")
     print("******** MAIN MENU ********")
     print("1. New Lifting Equipment")
@@ -29,7 +29,7 @@ def PrintMenu():
 
 def read_whole_positive(message):
     while True:
-        entry = input(message)
+        entry = input(entry)
     try:
         entry = int(entry)
         if entry<0:
@@ -37,6 +37,27 @@ def read_whole_positive(message):
         return entry
     except ValueError:
         print("Error, please enter a whole positive number")
+
+
+def insert_new_lifting_equipment():
+
+# Prints the saved data.
+def print_new_lifting_equipment():
+    print ("\n\n\n")
+    print("*** EQUIPMENT DATA ***")
+    print("ID: ", equipment_id)
+    print("Brand: ", equipment_brand)
+    print("Model: ", equipment_model)
+    print("Type: ", equipment_type)
+    print("Description: ", equipment_description)
+    print("Price before VAT: ", equipment_price_before_vat)
+    print("Price after VAT: ", equipment_price_after_vat)
+
+def insert_new_customer():
+
+def print_new_customer():
+
+
 
 
 
@@ -51,50 +72,39 @@ def read_whole_positive(message):
 VAT = 16  # consistently 16% VAT on all items
 num_ID = 0
 
-option =
+option = print_menu()
+while option !=4:
 # Prints the name of the option to run and calls the function it references if the inserted option is valid.
-elif option==1:
-    print("\n\n\n")
-    print("NEW LIFTING EQUIPMENT")
-    equipment_id = int(input("Please provide the identifier for the lifting equipment: "))
-    equipment_brand = input("Please provide the lifting equipment's brand name (PALFINGER, KONE or SCHMALZ): ")
-    if equipment_brand != "PALFINGER" and equipment_brand != "KONE" and equipment_brand != "SCHMALZ":
-        equipment_brand = "unkown"  # Default value used to either confirm or indicate that the information entered is incorrect.
-        print("Error, brand not permitted")
-    equipment_model = input("Please specify the model's name of the lifting apparatus: ")
-    equipment_type = input("Please specify the equipment type: ")
-    equipment_description = input("Please enter the lifting equipment's description here: ")
-    equipment_price_before_vat = int(input("Please input the cost of the lifting equipment, excluding VAT: "))
-    if (equipment_price_before_vat < 0): # Verifies whether the provided price is negative. If the result is negative, an error message is displayed on the screen.
-        equipment_price_before_vat = 0   # Default value used to either confirm or indicate that the information entered is incorrect.
-        print("Error, negative pricing are prohibited ")
-    equipment_price_after_vat = equipment_price_before_vat + equipment_price_before_vat*(VAT/100)
-    equipment_units_in_stock = int(input("Please specify the number of lifting equipment units that are currently in stock: "))
-    if (equipment_units_in_stock < 0): # Verifies whether the provided number is negative. If the result is negative, an error message is displayed on the screen.
-        equipment_units_in_stock = 0   # Default value used to either confirm or indicate that the information entered is incorrect.
-        print("Error, negative stock numbers are not permitted")
-
-    # Prints the saved data.
-    print ("\n\n\n")
-    print("*** EQUIPMENT DATA ***")
-    print("ID: ", equipment_id)
-    print("Brand: ", equipment_brand)
-    print("Model: ", equipment_model)
-    print("Type: ", equipment_type)
-    print("Description: ", equipment_description)
-    print("Price before VAT: ", equipment_price_before_vat)
-    print("Price after VAT: ", equipment_price_after_vat)
+    if option==1:
+        print("\n\n\n")
+        print("NEW LIFTING EQUIPMENT")
+        equipment_id = int(input("Please provide the identifier for the lifting equipment: "))
+        equipment_brand = input("Please provide the lifting equipment's brand name (PALFINGER, KONE or SCHMALZ): ")
+        if equipment_brand != "PALFINGER" and equipment_brand != "KONE" and equipment_brand != "SCHMALZ":
+            equipment_brand = "unkown"  # Default value used to either confirm or indicate that the information entered is incorrect.
+            print("Error, brand not permitted")
+        equipment_model = input("Please specify the model's name of the lifting apparatus: ")
+        equipment_type = input("Please specify the equipment type: ")
+        equipment_description = input("Please enter the lifting equipment's description here: ")
+        equipment_price_before_vat = int(input("Please input the cost of the lifting equipment, excluding VAT: "))
+        if (equipment_price_before_vat < 0): # Verifies whether the provided price is negative. If the result is negative, an error message is displayed on the screen.
+            equipment_price_before_vat = 0   # Default value used to either confirm or indicate that the information entered is incorrect.
+            print("Error, negative pricing are prohibited ")
+        equipment_price_after_vat = equipment_price_before_vat + equipment_price_before_vat*(VAT/100)
+        equipment_units_in_stock = int(input("Please specify the number of lifting equipment units that are currently in stock: "))
+        if (equipment_units_in_stock < 0): # Verifies whether the provided number is negative. If the result is negative, an error message is displayed on the screen.
+            equipment_units_in_stock = 0   # Default value used to either confirm or indicate that the information entered is incorrect.
+            print("Error, negative stock numbers are not permitted")
 
 
+    elif option==2:
+        print("\n\n\n")
+        print("NEW CUSTOMER")
 
-elif option==2:
-    print("\n\n\n")
-    print("NEW CUSTOMER")
+    elif option==3:
+        print("\n\n\n")
+        print("NEW LIFTING EQUIPMENT RENTAL")
 
-elif option==3:
-    print("\n\n\n")
-    print("NEW LIFTING EQUIPMENT RENTAL")
-
-elif option==4:
-    print("\n\n\n")
-    print("EXIT")
+    elif option==4:
+        print("\n\n\n")
+        print("EXIT")
