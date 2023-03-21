@@ -28,7 +28,7 @@ def print_menu():
 
 def read_whole_positive(message):
     while True:
-        entry = input(entry)
+        entry = input(message)
     try:
         entry = int(entry)
         if entry<0:
@@ -47,6 +47,7 @@ def insert_new_lifting_equipment():
     equipment_price_before_vat = int(input("Please input the cost of the lifting equipment, excluding VAT: "))
     equipment_price_after_vat = equipment_price_before_vat + equipment_price_before_vat*(VAT/100)
     equipment_units_in_stock = int(input("Please specify the number of lifting equipment units that are currently in stock: "))
+    return (equipment_id, equipment_brand, equipment_model, equipment_type, equipment_description, equipment_price_after_vat, equipment_units_in_stock )
 
 # Prints the saved data.
 def print_new_lifting_equipment():
@@ -77,14 +78,17 @@ def print_new_customer():
 
 # Constants
 VAT = 16  # consistently 16% VAT on all items
+
 num_ID = 0
 
 option = print_menu()
 while option !=4:
-# Prints the name of the option to run and calls the function it references if the inserted option is valid.
+
     if option==1:
         print("\n\n\n")
         print("NEW LIFTING EQUIPMENT")
+        insert_new_lifting_equipment()
+        print_new_lifting_equipment()
 
     elif option==2:
         print("\n\n\n")
@@ -93,10 +97,6 @@ while option !=4:
     elif option==3:
         print("\n\n\n")
         print("NEW LIFTING EQUIPMENT RENTAL")
-
-    elif option==4:
-        print("\n\n\n")
-        print("EXIT")
 
     option = print_menu()
 
