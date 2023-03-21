@@ -50,9 +50,9 @@ Moreover, the user must submit the following information when adding new custome
                                                  Enter new customer's NID with a 'NNNNNNNNL' format:  6273514H
                                                  NID 6273514H is not valid
                            
-                                                 Type new customer's NID with a 'NNNNNNNNL' format:  31734403S
+                                                 Enter new customer's NID with a 'NNNNNNNNL' format:  31734403S
                            
-                                                 Enter new customer's phone number:  913526271
+                                                 Type new customer's phone number:  913526271
                            
                                                  Fill in new customer's address:  Mount Avenue, 1  
                            
