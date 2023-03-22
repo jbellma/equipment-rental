@@ -90,6 +90,14 @@ def print_new_customer(name, first_surname, second_surname, nid, phone, address)
     print ("NID: ", nid)
     print ("Address: ", address)
 
+# Function that asks for a brand name and verifies until it is accurate.
+def read_brand(message):
+    brand_type = input(message)
+    while brand_type != "PALFINGER" and brand_type !="KONE" and brand_type !="SCHMALZ":
+        print("Error, brand not allowed")
+        brand_type = input(message)
+    return brand_type
+
 
 ###########################
 
