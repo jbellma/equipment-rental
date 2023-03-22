@@ -56,6 +56,46 @@ def read_real_positive(message):
        except ValueError:
            print ("Error, please enter a real positive number: ")
 
+def read_brand(message):
+    '''
+    Function that asks for a brand name and verifies until it is accurate.
+    '''
+    brand_type = input(message)
+    while brand_type != "PALFINGER" and brand_type !="KONE" and brand_type !="SCHMALZ":
+        print("Error, brand not allowed")
+        brand_type = input(message)
+    return brand_type
+
+def read_nid(message):
+    '''
+    A NID-requesting function that establishes its validity.
+    '''
+    while True:
+        raw_nid = input(message)
+        number = int(raw_nid [:-1]) # Separating the letter from the corresponding number.
+        sequence = "TRWAGMYFPDXBNJZSQVHLCKE"
+        correct_letter = sequence[number%23] # By dividing the number on your identity card by 23, you may determine the letter of your NID. This division leaves you with a remainder, and each one of them has a letter assigned to it.
+        try:
+            if correct_letter != raw_nid [-1]:
+                raise ValueError
+            else:
+                return raw_nid
+        except ValueError:
+            print("Error, please enter a valid NID")
+
+def read_phone_number(message):
+    '''
+    Function that confirms the legitimacy of a phone number.
+    '''
+    while True:
+        entry = read_whole_positive(message)
+        try:
+            if len(str(entry)) != 9:
+                raise ValueError
+            else:
+                return entry
+        except ValueError:
+            print("Error, enter a nine-digit phone number instead, please: ")
 
 # Prints menu
 def print_menu():
@@ -71,10 +111,6 @@ def print_menu():
         print("Error: invalid option")
         option = read_whole_positive("Please select an option (1-4): ")
     return option
-
-
-
-
 
 # Function that requests the new lifting equipment's data.
 def insert_new_lifting_equipment(equipment_id):
@@ -120,40 +156,7 @@ def print_new_customer(name, first_surname, second_surname, nid, phone, address)
     print ("NID: ", nid)
     print ("Address: ", address)
 
-# Function that asks for a brand name and verifies until it is accurate.
-def read_brand(message):
-    brand_type = input(message)
-    while brand_type != "PALFINGER" and brand_type !="KONE" and brand_type !="SCHMALZ":
-        print("Error, brand not allowed")
-        brand_type = input(message)
-    return brand_type
 
-# A NID-requesting function that establishes its validity.
-def read_nid(message):
-    while True:
-        raw_nid = input(message)
-        number = int(raw_nid [:-1]) # Separating the letter from the corresponding number.
-        sequence = "TRWAGMYFPDXBNJZSQVHLCKE"
-        correct_letter = sequence[number%23] # By dividing the number on your identity card by 23, you may determine the letter of your NID. This division leaves you with a remainder, and each one of them has a letter assigned to it.
-        try:
-            if correct_letter != raw_nid [-1]:
-                raise ValueError
-            else:
-                return raw_nid
-        except ValueError:
-            print("Error, please enter a valid NID")
-
-# Function that confirms the legitimacy of a phone number.
-def read_phone_number(message):
-    while True:
-        entry = read_whole_positive(message)
-        try:
-            if len(str(entry)) != 9:
-                raise ValueError
-            else:
-                return entry
-        except ValueError:
-            print("Error, enter a nine-digit phone number instead, please: ")
 
 ###########################
 
