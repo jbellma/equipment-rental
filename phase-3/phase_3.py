@@ -16,7 +16,6 @@ def read_integer(message):
         except ValueError:
             print("Error, expecting a whole number! Please enter a whole number: ")
 
-
 def read_whole_positive(message):
     '''
     An integer-requesting function that verifies it using exceptions till it is accurate.
@@ -30,6 +29,33 @@ def read_whole_positive(message):
             return entry
         except ValueError:
             print("Error, please enter a positive integer")
+
+def read_float(message):
+    '''
+    Function that asks for a real number and verifies it using exceptions until it is accurate.
+    '''
+    while True:
+        entry = input(message)
+        try:
+            float_number = float(entry)
+            return float_number
+        except:
+            print("Error, please enter a real number")
+
+def read_real_positive(message):
+   '''
+    Function that asks for a positive real number and verifies it using exceptions until it is accurate.
+   '''
+   while True:
+       entry = input(message)
+       try:
+           entry = float(entry)
+           if entry < 0:
+               raise ValueError
+           return entry
+       except ValueError:
+           print ("Error, please enter a real positive number: ")
+
 
 # Prints menu
 def print_menu():
@@ -48,17 +74,7 @@ def print_menu():
 
 
 
-# Function that asks for a positive real number and verifies it using exceptions until it is accurate.
-def read_real_positive(message):
-   while True:
-       entry = input(message)
-       try:
-           entry = float(entry)
-           if entry < 0:
-               raise ValueError
-           return entry
-       except ValueError:
-           print ("Error, please enter a real positive number: ")
+
 
 # Function that requests the new lifting equipment's data.
 def insert_new_lifting_equipment(equipment_id):
