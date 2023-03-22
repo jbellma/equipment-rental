@@ -76,7 +76,7 @@ def insert_new_customer():
     name = input("Enter new customer's name: ")
     first_surname = input("Fill in new customer's first surname: ")
     second_surname = input("Complete new customer's second surname: ")
-    nid = input("Enter new customer's NID with a 'NNNNNNNNL' format: ")
+    nid = read_nid("Enter new customer's NID with a 'NNNNNNNNL' format: ")
     phone = input("Type new customer's phone number: ")
     address = input("Fill in new customer's address: ")
     return (name, first_surname, second_surname, nid, phone, address)
@@ -98,6 +98,20 @@ def read_brand(message):
         brand_type = input(message)
     return brand_type
 
+# An NID-requesting function that establishes its validity.
+def read_nid(message):
+    while True:
+        raw_nid = input(message)
+        number = int(raw_nid [:-1]) # Separating the letter from the corresponding number.
+        sequence = "TRWAGMYFPDXBNJZSQVHLCKE"
+        correct_letter = sequence[number%23] # By dividing the number on your identity card by 23, you may determine the letter of your NID. This division leaves you with a remainder, and each one of them has a letter assigned to it.
+        try:
+            if correct_letter != raw_nid [-1]:
+                raise ValueError
+            else:
+                return raw_nid
+        except ValueError:
+            print("Error, please enter a valid NID")
 
 ###########################
 
