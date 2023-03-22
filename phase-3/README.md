@@ -5,7 +5,7 @@
 
 It should be understood ***phase 3*** as a continuation of the second phase. Unlike ***phase 2***, this phase requires the use of data structures (lists, dictionaries, sets, etc.) whenever necessary. Libraries won't be used.
 
-***Phase 3*** adds to the program delivered in ***Phase 2*** the use of data structures for storage of information in the program and its management.
+***Phase 3*** adds to the code delivered in ***Phase 2*** the use of data structures for storage of information in the program and its management.
 
 
 ---
