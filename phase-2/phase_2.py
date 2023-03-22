@@ -77,7 +77,7 @@ def insert_new_customer():
     first_surname = input("Fill in new customer's first surname: ")
     second_surname = input("Complete new customer's second surname: ")
     nid = read_nid("Enter new customer's NID with a 'NNNNNNNNL' format: ")
-    phone = input("Type new customer's phone number: ")
+    phone = read_phone_number("Type new customer's phone number with a 'NNNNNNNNN' format: ")
     address = input("Fill in new customer's address: ")
     return (name, first_surname, second_surname, nid, phone, address)
 
@@ -112,6 +112,18 @@ def read_nid(message):
                 return raw_nid
         except ValueError:
             print("Error, please enter a valid NID")
+
+# Function that confirms the legitimacy of a phone number.
+def read_phone_number(message):
+    while True:
+        entry = read_whole_positive(message)
+        try:
+            if len(str(entry)) != 9:
+                raise ValueError
+            else:
+                return entry
+        except ValueError:
+            print("Error, enter a nine-digit phone number instead, please: ")
 
 ###########################
 
