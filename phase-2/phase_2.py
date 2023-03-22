@@ -6,6 +6,7 @@
 
 ###########################
 
+# Prints menu
 def print_menu():
     print("\n\n\n")
     print("******** MAIN MENU ********")
@@ -21,6 +22,7 @@ def print_menu():
         option = read_whole_positive("Please select an option (1-4): ")
     return option
 
+# An integer-requesting function that verifies it using exceptions till it is accurate.
 def read_whole_positive(message):
     while True:
         entry = input(message)
@@ -30,8 +32,9 @@ def read_whole_positive(message):
                 raise ValueError
             return entry
         except ValueError:
-            print("Error, please enter a whole positive number")
+            print("Error, please enter a positive integer")
 
+# Function that asks for a positive real number and verifies it using exceptions until it is accurate
 def read_real_positive(message):
    while True:
        entry = input(message)
@@ -43,6 +46,7 @@ def read_real_positive(message):
        except ValueError:
            print ("Error, please enter a real positive number: ")
 
+# Function that requests the new lifting equipment's data.
 def insert_new_lifting_equipment(equipment_id):
     equipment_id =  equipment_id + 1
     equipment_brand = input("Please provide the lifting equipment's brand name (PALFINGER, KONE or SCHMALZ): ")
@@ -54,6 +58,7 @@ def insert_new_lifting_equipment(equipment_id):
     equipment_units_in_stock = read_whole_positive("Please specify the number of lifting equipment units that are currently in stock: ")
     return (equipment_id, equipment_brand, equipment_model, equipment_type, equipment_description, equipment_price_after_vat, equipment_price_after_vat, equipment_units_in_stock)
 
+# Function that prints the new lifting equipment's stored data.
 def print_new_lifting_equipment(equipment_id, equipment_brand, equipment_model, equipment_type, equipment_description, equipment_price_before_vat, equipment_price_after_vat, equipment_units_in_stock):
     print ("\n\n\n")
     print("*** EQUIPMENT DATA ***")
@@ -66,6 +71,7 @@ def print_new_lifting_equipment(equipment_id, equipment_brand, equipment_model, 
     print("Price after VAT: ", equipment_price_after_vat)
     print("Stock: ", equipment_units_in_stock)
 
+# Function that requests the new client's data.
 def insert_new_customer():
     name = input("Enter new customer's name: ")
     first_surname = input("Fill in new customer's first surname: ")
@@ -75,6 +81,7 @@ def insert_new_customer():
     address = input("Fill in new customer's address: ")
     return (name, first_surname, second_surname, nid, phone, address)
 
+# Function that prints the new customer's stored data.
 def print_new_customer(name, first_surname, second_surname, nid, phone, address):
     print ("\n\n\n")
     print ("Name: ", name)
