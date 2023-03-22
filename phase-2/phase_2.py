@@ -49,7 +49,7 @@ def read_real_positive(message):
 # Function that requests the new lifting equipment's data.
 def insert_new_lifting_equipment(equipment_id):
     equipment_id =  equipment_id + 1
-    equipment_brand = input("Please provide the lifting equipment's brand name (PALFINGER, KONE or SCHMALZ): ")
+    equipment_brand = read_brand("Please provide the lifting equipment's brand name (PALFINGER, KONE or SCHMALZ): ")
     equipment_model = input("Please specify the model's name of the lifting apparatus: ")
     equipment_type = input("Please specify the equipment type: ")
     equipment_description = input("Please enter the lifting equipment's description here: ")
