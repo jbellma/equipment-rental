@@ -34,7 +34,7 @@ def read_whole_positive(message):
         except ValueError:
             print("Error, please enter a positive integer")
 
-# Function that asks for a positive real number and verifies it using exceptions until it is accurate
+# Function that asks for a positive real number and verifies it using exceptions until it is accurate.
 def read_real_positive(message):
    while True:
        entry = input(message)
@@ -99,11 +99,10 @@ def print_new_customer(name, first_surname, second_surname, nid, phone, address)
 
 # Constants
 VAT = 16  # consistently 16% VAT on all items
-
 num_ID = 0
 
 option = print_menu()
-while option !=4:
+while option !=4: # Depending on the selection entered, different actions are taken as long as the exit option has not been selected.
     if option == 1:
         print("\n\n\n")
         print("NEW LIFTING EQUIPMENT")
