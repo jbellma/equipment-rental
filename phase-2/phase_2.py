@@ -15,7 +15,6 @@ def print_menu():
     print("3. New Lifting Equipment Rental")
     print("4. Exit")
 
-
     option = read_whole_positive("Please select an option (1-4): ")
     while option<1 or option>4:
         print("Error: invalid option")
