@@ -98,7 +98,7 @@ def read_brand(message):
         brand_type = input(message)
     return brand_type
 
-# An NID-requesting function that establishes its validity.
+# A NID-requesting function that establishes its validity.
 def read_nid(message):
     while True:
         raw_nid = input(message)
