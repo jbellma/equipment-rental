@@ -97,8 +97,11 @@ def read_phone_number(message):
         except ValueError:
             print("Error, enter a nine-digit phone number instead, please: ")
 
-# Prints menu
+
 def print_menu():
+    '''
+    Prints menu.
+    '''
     print("\n\n\n")
     print("******** MAIN MENU ********")
     print("1. New Lifting Equipment")
@@ -112,8 +115,11 @@ def print_menu():
         option = read_whole_positive("Please select an option (1-4): ")
     return option
 
-# Function that requests the new lifting equipment's data.
+
 def insert_new_lifting_equipment(equipment_id):
+    '''
+    Function that requests the new lifting equipment's data.
+    '''
     equipment_id =  equipment_id + 1
     equipment_brand = read_brand("Please provide the lifting equipment's brand name (PALFINGER, KONE or SCHMALZ): ")
     equipment_model = input("Please specify the model's name of the lifting apparatus: ")
@@ -124,8 +130,11 @@ def insert_new_lifting_equipment(equipment_id):
     equipment_units_in_stock = read_whole_positive("Please specify the number of lifting equipment units that are currently in stock: ")
     return (equipment_id, equipment_brand, equipment_model, equipment_type, equipment_description, equipment_price_after_vat, equipment_price_after_vat, equipment_units_in_stock)
 
-# Function that prints the new lifting equipment's stored data.
+
 def print_new_lifting_equipment(equipment_id, equipment_brand, equipment_model, equipment_type, equipment_description, equipment_price_before_vat, equipment_price_after_vat, equipment_units_in_stock):
+    '''
+    Function that prints the new lifting equipment's stored data.
+    '''
     print ("\n\n\n")
     print("*** EQUIPMENT DATA ***")
     print("ID: ", equipment_id)
@@ -137,8 +146,11 @@ def print_new_lifting_equipment(equipment_id, equipment_brand, equipment_model, 
     print("Price after VAT: ", equipment_price_after_vat)
     print("Stock: ", equipment_units_in_stock)
 
-# Function that requests the new client's data.
+
 def insert_new_customer():
+    '''
+    Function that requests the new client's data.
+    '''
     name = input("Enter new customer's name: ")
     first_surname = input("Fill in new customer's first surname: ")
     second_surname = input("Complete new customer's second surname: ")
@@ -147,8 +159,11 @@ def insert_new_customer():
     address = input("Fill in new customer's address: ")
     return (name, first_surname, second_surname, nid, phone, address)
 
-# Function that prints the new customer's stored data.
+
 def print_new_customer(name, first_surname, second_surname, nid, phone, address):
+    '''
+    Function that prints the new customer's stored data.
+    '''
     print ("\n\n\n")
     print ("Name: ", name)
     print ("First Surname: ", first_surname)
