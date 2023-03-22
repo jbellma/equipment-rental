@@ -50,8 +50,6 @@ elif option==1:
     print("Price before VAT: ", equipment_price_before_vat)
     print("Price after VAT: ", equipment_price_after_vat)
 
-
-
 elif option==2:
     print("\n\n\n")
     print("NEW CUSTOMER")
