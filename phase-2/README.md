@@ -75,7 +75,7 @@ The usage of functions, as was already said, is a significant difference in this
 At the very least, we'll implement the following features:
 - A method for displaying menus and returning the user's chosen option (only valid options).
 - A function that carries out ***option 1*** (register a new product). The user will be prompted for the information, and the function will do the necessary checks. The dataset for the new product will be returned as a parameter.
-- A function that carries out menu item "***option 2***" (new customer). By calling the relevant function, you must confirm that the NID is accurate. The entire client data will be returned as a dataset.
+- A function that carries out menu item "***option 2***" (new customer). By calling the relevant function, it must be established the NID's accuracy. The entire client data will be returned as a dataset.
 - A function that repeatedly requests a genuine number from the user until it receives it.
 - A function that shows all the information for a piece of lifting gear and another function that shows all the information for a particular client
 
