@@ -1,8 +1,35 @@
 ###########################
 
-    # Functions
+    # Initial Functions
 
 ###########################
+
+def read_integer(message):
+    '''
+    Function that requests an integer and verifies it by making exceptions.
+    '''
+    while True:
+        entry = input(message)
+        try:
+            entry = int(entry)
+            return entry
+        except ValueError:
+            print("Error, expecting a whole number! Please enter a whole number: ")
+
+
+def read_whole_positive(message):
+    '''
+    An integer-requesting function that verifies it using exceptions till it is accurate.
+    '''
+    while True:
+        entry = input(message)
+        try:
+            entry = int(entry)
+            if entry<0:
+                raise ValueError
+            return entry
+        except ValueError:
+            print("Error, please enter a positive integer")
 
 # Prints menu
 def print_menu():
@@ -19,17 +46,7 @@ def print_menu():
         option = read_whole_positive("Please select an option (1-4): ")
     return option
 
-# An integer-requesting function that verifies it using exceptions till it is accurate.
-def read_whole_positive(message):
-    while True:
-        entry = input(message)
-        try:
-            entry = int(entry)
-            if entry<0:
-                raise ValueError
-            return entry
-        except ValueError:
-            print("Error, please enter a positive integer")
+
 
 # Function that asks for a positive real number and verifies it using exceptions until it is accurate.
 def read_real_positive(message):
