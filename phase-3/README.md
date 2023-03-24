@@ -28,7 +28,7 @@ All of these features can be broken down into the ***four*** basic duties listed
 
 ### TASK 1: Robust Code
 
-Code must be modified to ensure that it never throws unexpected runtime errors but rather detects all potential issues, primarily by user input. The following figure provides instances of various wrong NIDs along with solutions.
+Code must be modified to ensure that it never throws unexpected runtime errors but rather detects all potential issues, primarily by user input. The following figure provides instances of various wrong ***NIDs*** along with solutions.
 
 FIGURE NEEDED
 
@@ -50,12 +50,12 @@ FIGURE NEEDED
 
 ### TASK 3: Storage of Lifting Equipment and Customer Information
 
-The program will enable the storage of numerous lifting devices and costumers (no limit).
+The program will enable the storage of numerous lifting devices and custumers (no limit).
 Equipment and customer data can be modified at any moment.
 
 - All equipment will be arranged in chronological order. Every time the user chooses to insert a new lifting equipment (***option 1***), the list of all existing         equipment will be displayed.
 
-- Customers will always be arranged in accordance with their NID (from lowest to highest).
+- Customers will always be arranged in accordance to their NID (from lowest to highest).
 
   Every time the user inserts a new client, the program will check that one ***NID*** is not shared by more than one client. It will also show the complete list of clients in an orderly manner. ***NID*** number 12345678 precedes ***NID*** number 8765432.
   
@@ -87,6 +87,11 @@ Rental data is very important to the company, so it will be necessary to store i
 
 To facilitate the user's work when inserting a new rental, the ***NID*** of all existing customers + the ***Identifiers*** of all lifting equipment will be shown previously on the screen as if they were two lists. A function will be created to return a list of ***NIDs*** of registered customers and another function to return a list of ***Identifiers*** of all registered lifting equipment. 
 
+Finally, to make it easier for the user to insert a suitable price, the lowest and highest price of the rentals that have already been made for that same lifting equipment will be displayed on the screen, displaying the message "no previous rentals have been made for that equipment” if none exists. 
+
+A function will be created to accurately display all rentals.
+
+FIGURE NEEDED
 
 
 
