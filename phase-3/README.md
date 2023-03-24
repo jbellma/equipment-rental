@@ -48,11 +48,27 @@ FIGURE NEEDED
                                             
 ---
 
-### TASK 3: Storage of Lifting equipment and Customer Information
+### TASK 3: Storage of Lifting Equipment and Customer Information
 
 The program will enable the storage of numerous lifting devices and costumers (no limit).
-Equipment or customer data can be modified at any moment.
+Equipment and customer data can be modified at any moment.
+
+- All equipment will be arranged in chronological order. Every time the user chooses to insert a new lifting equipment (***option 1***), the list of all existing         equipment will be displayed.
+
+- Customers will always be arranged in accordance with their NID (from lowest to highest).
+
+  Every time the user inserts a new client, the program will check that one ***NID*** is not shared by more than one client. It will also show the complete list of clients in an orderly manner. ***NID*** number 12345678 precedes ***NID*** number 8765432.
+  
+  FIGURE NEEDED
+  
+  FIGURE NEEDED
 
 ---
 
-### TASK 4
+### TASK 4: Lifting Equipment Rental
+
+The appliacation will allow the user to enter information on new rental equipment. This requires the user to provide the following information:
+
+
+
+
