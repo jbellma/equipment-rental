@@ -182,30 +182,30 @@ Rental data is very important to the company, so it will be necessary to store i
 
 To facilitate the user's work when inserting a new rental, the ***NID*** of all existing customers + the ***Identifiers*** of all lifting equipment will be shown previously on the screen as if they were two lists. A function will be created to return a list of ***NIDs*** of registered customers and another function to return a list of ***Identifiers*** of all registered lifting equipment. 
 
-                          ******** MAIN MENU ********
-                          1. New Lifting Equipment
-                          2. New Customer
-                          3. New Lifting Equipment Rental
-                          4. Exit
+                           ******** MAIN MENU ********
+                           1. New Lifting Equipment
+                           2. New Customer
+                           3. New Lifting Equipment Rental
+                           4. Exit
 
-                          Please select an option from the menu: 3
-                          NEW LIFTING EQUIPMENT RENTAL
-                          EQUIPMENT: [1, 2, 3]
-                          CUSTOMERS: ['12345678Z', '23456789D']
+                           Please select an option from the menu: 3
+                           NEW LIFTING EQUIPMENT RENTAL
+                           EQUIPMENT: [1, 2, 3]
+                           CUSTOMERS: ['12345678Z', '23456789D']
 
 Finally, to make it easier for the user to insert a suitable price, the lowest and highest price of the rentals that have already been made for that same lifting equipment will be displayed on the screen, displaying the message ***"no previous rentals have been made for that equipment”*** if none exists. 
 
 A function will be created to accurately display all rentals.
-
-                          For equipment 3 the HIGHEST rental price so far is 300 and the lowest is 0
+ 
+                           For equipment 3 the HIGHEST rental price so far is 300 and the lowest is 0
                           
-                          Please type the rental price: 200
-                          ############## RENTALS ###############################################
-                          LIFTING EQUIPMENT 3
-                          - ['12345678Z', '11/11/1111', '11/11/1111', 300]
-                          - ['23456789D', '22/22/2222', '22/22/2222', 200]
-                          LIFTING EQUIPMENT 1
-                          - ['12345678Z', '11/11/1111', '11/11/1111', 250]
+                           Please type the rental price: 200
+                           ############## RENTALS ###############################################
+                           LIFTING EQUIPMENT 3
+                           - ['12345678Z', '11/11/1111', '11/11/1111', 300]
+                           - ['23456789D', '22/22/2222', '22/22/2222', 200]
+                           LIFTING EQUIPMENT 1
+                           - ['12345678Z', '11/11/1111', '11/11/1111', 250]
                           
                           
                           
