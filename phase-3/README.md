@@ -69,6 +69,25 @@ Equipment and customer data can be modified at any moment.
 
 The appliacation will allow the user to enter information on new rental equipment. This requires the user to provide the following information:
 
+- ***NID*** of the client attempting to rent lifting gear: the application will verify that the user exists previousy in the system. Until the user enters an NID that is already registered in the system, the software will continuously request the ***NID***.
+
+FIGURE NEEDED
+
+- ***Identifier*** of the lifting equipment to be rented: the application will verify that the equipment exists previously in the system before being rented. For this last ***phase 3***, the application won't check to see whether more equipment is being rented than is available given its complexity.
+
+- Start and end date of the rental: the program will not check if days are correct,
+but they will have to follow the following format "DD/MM/YYYY" at all times, requesting
+repeatedly until it is correct. 
+
+FIGURE NEEDED
+
+- Price without VAT: program will check if is a positive integer.
+
+Rental data is very important to the company, so it will be necessary to store it properly in the system. In this case, it will be stored as a dictionary where the ***Identifier*** of the lifting equipment will be considered the ***Key***. As ***Value*** in the dictionary, a list will be included with all the rental data for that lifting equipment (customer ID, start_date, end_date and price). 
+
+To facilitate the user's work when inserting a new rental, the ***NID*** of all existing customers + the ***Identifiers*** of all lifting equipment will be shown previously on the screen as if they were two lists. A function will be created to return a list of ***NIDs*** of registered customers and another function to return a list of ***Identifiers*** of all registered lifting equipment. 
+
+
 
 
 
