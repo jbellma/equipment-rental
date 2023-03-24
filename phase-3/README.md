@@ -60,11 +60,12 @@ For instance, the user can enter the brand name ***PALFINGER***  as ***"PalfINg
                              Error, brand not allowed.
                              
                              Please provide the lifting equipment's brand name (PALFINGER, KONE or SCHMALZ): PalfINger
-                             Data stored in the program: palfinger
+                             Stored brand: palfinger
 
 Only one exception applies. The ***NID*** letter will be saved using the standard format for this data, which is a capital letter. If the user types it in lowercase, the program will change it and store it with the uppercase character as we have stated.
 
-FIGURE NEEDED
+                             Enter new customer's NID with a 'NNNNNNNNL' format: 12345678z
+                             Stored NID: 12345678Z
                                             
 ---
 
@@ -73,13 +74,24 @@ FIGURE NEEDED
 The program will enable the storage of numerous lifting devices and custumers (no limit).
 Equipment and customer data can be modified at any moment.
 
-- All equipment will be arranged in chronological order. Every time the user chooses to insert a new lifting equipment (***option 1***), the list of all existing         equipment will be displayed.
+- All equipment will be arranged in chronological order. Every time the user chooses to insert a new lifting equipment (***option 1***), the list of all existing equipment will be displayed.
+
+                            Plase select an option from the menu: 1
+                            ## LIFTING EQUIPMENT ##
+                            ID     BRAND     MODEL     TYPE     DESCRIPTION      PRICE     P.+VAT     STOCK
+                            ==     =====     =====     ====     ============     =====     ======     =====
+                            1      palfinger m12       crane    basic crane      1300.00   1508.0     10
+                            2      kone      m1234     booster  basic booster    1500.0    1740.0      5
+                            
+                            *** INSERT NEW LIFTING EQUIPMENT ***
+                            
+                         
 
 - Customers will always be arranged in accordance to their NID (from lowest to highest).
 
   Every time the user inserts a new client, the program will check that one ***NID*** is not shared by more than one client. It will also show the complete list of clients in an orderly manner. ***NID*** number 12345678 precedes ***NID*** number 8765432.
   
-  FIGURE NEEDED
+  
   
   FIGURE NEEDED
 
