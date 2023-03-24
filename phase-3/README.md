@@ -166,12 +166,12 @@ but they will have to follow the following format "DD/MM/YYYY" at all times, req
 repeatedly until it is correct. 
 
 
-                           Please insert a date with a DD/MM/AAAA: as/as/asdf
+                           Please insert a date with a DD/MM/AAAA format: as/as/asdf
                            Error, integers were expected to indicate DD, MM and AAAA. The expected format is DD/MM/AAAA.
                            
-                           Please insert a date with a DD/MM/AAAA: 1/11/2021
+                           Please insert a date with a DD/MM/AAAA format: 1/11/2021
                            
-                           Please insert a date with a DD/MM/AAAA: 01/15/2021
+                           Please insert a date with a DD/MM/AAAA format: 01/15/2021
                            01/15/2021
                            
                                                      
