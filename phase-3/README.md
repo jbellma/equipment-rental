@@ -53,11 +53,14 @@ The program will always store all input as lowercase character strings in progra
 
 For instance, the user can enter the brand name ***PALFINGER***  as ***"PalfINger,"*** and the program will still presented as a proper value and store it in lowercase.
 
-                             Please provide the lifting equipment's brand name (PALFINGER, KONE or SCHMALZ):
+                             Please provide the lifting equipment's brand name (PALFINGER, KONE or SCHMALZ): PALFING
+                             Error, brand not allowed.
                              
-                             Please provide the lifting equipment's brand name (PALFINGER, KONE or SCHMALZ):
+                             Please provide the lifting equipment's brand name (PALFINGER, KONE or SCHMALZ): PalFING
+                             Error, brand not allowed.
                              
-                             Please provide the lifting equipment's brand name (PALFINGER, KONE or SCHMALZ):
+                             Please provide the lifting equipment's brand name (PALFINGER, KONE or SCHMALZ): PalfINger
+                             Data stored in the program: palfinger
 
 Only one exception applies. The ***NID*** letter will be saved using the standard format for this data, which is a capital letter. If the user types it in lowercase, the program will change it and store it with the uppercase character as we have stated.
 
