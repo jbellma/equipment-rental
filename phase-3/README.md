@@ -76,25 +76,70 @@ Equipment and customer data can be modified at any moment.
 
 - All equipment will be arranged in chronological order. Every time the user chooses to insert a new lifting equipment (***option 1***), the list of all existing equipment will be displayed.
 
-                            Plase select an option from the menu: 1
+                            Please select an option from the menu: 1
                             ## LIFTING EQUIPMENT ##
                             ID     BRAND     MODEL     TYPE     DESCRIPTION      PRICE     P.+VAT     STOCK
                             ==     =====     =====     ====     ============     =====     ======     =====
                             1      palfinger m12       crane    basic crane      1300.00   1508.0     10
                             2      kone      m1234     booster  basic booster    1500.0    1740.0      5
                             
-                            *** INSERT NEW LIFTING EQUIPMENT ***
+                            *** INSERT NEW LIFTING EQUIPMENT: ***
+                            
+                            Please provide the lifting equipment's brand name (PALFINGER, KONE or SCHMALZ):
                             
                          
-
 - Customers will always be arranged in accordance to their NID (from lowest to highest).
 
   Every time the user inserts a new client, the program will check that one ***NID*** is not shared by more than one client. It will also show the complete list of clients in an orderly manner. ***NID*** number 12345678 precedes ***NID*** number 8765432.
   
   
-  
-  FIGURE NEEDED
+                           *** INSERT NEW CUSTOMER DATA ***
+                           
+                           Enter new customer's name: john
+                           
+                           Fill in new customer's first surname: williams
+                           
+                           Complete new customer's second surname: valentine
+                           
+                           Enter new customer's NID with a 'NNNNNNNNL' format: 23456789v
+                           23456789v is not a valid NID.
+                           
+                           Enter new customer's NID with a 'NNNNNNNNL' format: 23456789d 
+                           Error, that NID already exists, enter another NID.
+                           
+                           Enter new customer's NID with a 'NNNNNNNNL' format: 34567890v
+                           
+                           Type new customer's phone number with a 'NNNNNNNNN' format: 918273645
+                          
+                          
+      
+      
+    ...
+                           
+                           
+        
+                            ## CUSTOMERS: ##
+                            NID        NAME     SURNAME1  SURNAME2     PHONE      ADDRESS     
+                            ===        =====    ========  ========     =====      =======     
+                            12345678Z  laura    moon      donegal      918273645  ann square, 1
+                            23456789D  maria    hololan   richards     928374628  clogersaint, 4
+                            34567890V  john     williams  valentine    918273645  kinsal, 7
+                            
+                            
+                            
+                            
+                            ******** MAIN MENU ********
+                            1. New Lifting Equipment
+                            2. New Customer
+                            3. New Lifting Equipment Rental
+                            4. Exit
 
+                            Please select an option from the menu:
+                            
+                           
+                           
+                           
+                    
 ---
 
 ### TASK 4: Lifting Equipment Rental
