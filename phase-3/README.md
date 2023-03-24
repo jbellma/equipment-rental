@@ -30,7 +30,20 @@ All of these features can be broken down into the ***four*** basic duties listed
 
 Code must be modified to ensure that it never throws unexpected runtime errors but rather detects all potential issues, primarily by user input. The following figure provides instances of various wrong ***NIDs*** along with solutions.
 
-FIGURE NEEDED
+                              Enter new customer's NID with a 'NNNNNNNNL' format: 8917234iuyqw
+                              Error, there must be numbers in the first 8 characters. Please provide a valid NID.
+                              
+                              Enter new customer's NID with a 'NNNNNNNNL' format: absnd3ns9
+                              Error, there must be numbers in the first 8 characters. Please provide a valid NID.
+                              
+                              Enter new customer's NID with a 'NNNNNNNNL' format: 1234567893l
+                              1234567893l is not a valid NID.
+                              
+                              Enter new customer's NID with a 'NNNNNNNNL' format: 123
+                              123 is not a valid NID.
+                              
+                              Enter new customer's NID with a 'NNNNNNNNL' format: 12345678L
+                              12345678L is not a valid NID.
 
 ---
 
