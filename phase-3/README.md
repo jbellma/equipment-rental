@@ -11,11 +11,17 @@ It should be understood ***phase 3*** as a continuation of the second phase. Unl
 ---
 
 ### Phase 2: Tasks to be Completed
-- Task 1: 
-- Task 2: 
-- Task 3: 
-- Task 4:
-- Task 5:
+- Task 1: The code will be completely error-free and capture errors with exceptions.
+
+- Task 2: To prevent errors, data will be kept in lower case. NID will be written in all caps when stored. 
+
+- Task 3: Clients and lifting supplies will be arranged and stored appropriately.
+
+- Task 4: The application will allow users to add new rental records for lifting equipment and save them in a   dictionary           of lists.
+
+- Task 5: Data on lifting devices, customers, and rentals will always be displayed as indicated.
+
+All of these features can be broken down into the ***four*** basic duties listed below.
 
 ---
 
