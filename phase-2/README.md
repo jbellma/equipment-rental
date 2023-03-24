@@ -68,7 +68,7 @@ Moreover, the user must submit the following information when adding new custome
 
 ---
 
-### TASK 3: Using functions
+### TASK 3: Using Functions
 
 The usage of functions, as was already said, is a significant difference in this phase. Among other things, this will enable us to finish the program's logic, though not the full program. 
 
