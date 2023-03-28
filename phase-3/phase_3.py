@@ -66,6 +66,16 @@ def read_brand(message):
         brand_type = input(message)
     return brand_type
 
+def read_eight_first_digits_nid(digit_nid):
+    nid = digit_nid
+    raw_input_values = nid[:-1]
+    numbers = '1234567890'
+    for value in raw_input_values:
+        if value not in numbers:
+            print("Error, there must be numbers in the first 8 characters. Please provide a valid NID.")
+            return False
+    return True
+
 def read_nid(message):
     '''
     A NID-requesting function that establishes its validity.
