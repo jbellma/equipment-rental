@@ -150,7 +150,7 @@ def show_menu():
     option = read_integer("Please select an option (1-4): ")
     while option < 1 or option > 4:
         print("There are four choices, numbered one through four.")
-        print("\n\n\n")
+        print("\n\n")
         print_menu()
         option = read_integer("Please select an option (1-4): ")
     return (option)
@@ -176,7 +176,7 @@ def print_list_equipment(list_equipment):
         print("***********************************************************************************")
         for equipment in list_equipment:
             for value in equipment.values():
-                print(str(value).ljust(20), end ='\t')
+                print(str(value).ljust(25), end ='\t')
             print()
 
 def register_equipment (num_id):
