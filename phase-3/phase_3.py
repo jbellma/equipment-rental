@@ -115,6 +115,7 @@ def read_phone_number(message):
             print("Error, enter a nine-digit phone number instead, please: ")
 
 
+
 def print_menu():
     '''
     Prints menu.
@@ -195,6 +196,12 @@ def print_new_customer(name, first_surname, second_surname, nid, phone, address)
     # Main Program
 
 ###########################
+
+allowedBrands = ("palfinger", "kone", "schmalz")
+
+list_equipment = []
+list_equipment_id = []
+
 
 # Constants
 VAT = 16  # consistently 16% VAT on all items
