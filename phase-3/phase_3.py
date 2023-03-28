@@ -152,6 +152,15 @@ def show_menu():
         option = read_whole_positive("Please select an option (1-4): ")
     return option
 
+def register_equipment (num_ID):
+    '''
+    Function register equipment
+    '''
+
+    equipment = {}
+
+    equipment['equipment_id'] = num_ID + 1 # We assign the following integer
+
 def insert_new_lifting_equipment(equipment_id):
     '''
     Function that requests the new lifting equipment's data.
@@ -229,14 +238,13 @@ num_ID = 0 # When the program launches, it begins by numbering  from number 1
 
 running = True # Determines whether we proceed through the menu or the user has selected option 4
 while running:
-    option = show_menu()
-    if option == 1:
+    option = show_menu() # Prints menu
+    if option == 1: # New lifting equipment registration
         print("\n\n\n")
-        print("NEW LIFTING EQUIPMENT")
-        (iden, bra, mod, typ, des, b_vat, af_vat, sto) = insert_new_lifting_equipment(num_ID)
-        print_new_lifting_equipment(iden, bra, mod, typ, des, b_vat, af_vat, sto)
+        print_list_equipment(list_equipment)
+        print("*** ADD NEW LIFTING EQUIPMENT DATA: ***")
+        num_ID = register_equipment(num_ID)
 
-        num_ID = num_ID + 1
 
     elif option == 2 :
         print("\n\n\n")
