@@ -83,7 +83,7 @@ def read_eight_first_digits_nid(digit_nid):
             return False
     return True
 
-def read_nid(message):
+def read_letter_nid(message):
     '''
     A NID-requesting function that establishes its validity.
     '''
