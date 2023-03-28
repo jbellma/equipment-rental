@@ -159,12 +159,22 @@ def print_dictionary_equipment(dictionary):
     for key in dictionary:
         print(key, ":", dictionary[key])
 
-def print_list_equipment():
+def print_list_equipment(list_equipment):
     '''
     Function that prints list of equipment
     '''
-
-
+    if len(list_equipment) == 0:
+        print("There are no items to display yet...")
+    else:
+        for header in list_equipment[0].keys():
+            print(header.upper().ljust(20), end = '\t')
+        print("\n*************************************************************",end = "")
+        print("****************************************************************",end = "")
+        print("*****************************************************************************")
+        for equipment in list_equipment:
+            for value in equipment.values():
+                print(str(value).ljust(30), end ='\t')
+            print()
 
 def register_equipment (num_ID):
     '''
@@ -187,23 +197,6 @@ def register_equipment (num_ID):
 
     print("\n")
     print_dictionary_equipment(equipment)
-
-
-
-def print_new_lifting_equipment(equipment_id, equipment_brand, equipment_model, equipment_type, equipment_description, equipment_price_before_vat, equipment_price_after_vat, equipment_units_in_stock):
-    '''
-    Function that prints the new lifting equipment's stored data.
-    '''
-    print ("\n\n\n")
-    print("*** EQUIPMENT DATA ***")
-    print("ID: ", equipment_id)
-    print("Brand: ", equipment_brand)
-    print("Model: ", equipment_model)
-    print("Type: ", equipment_type)
-    print("Description: ", equipment_description)
-    print("Price before VAT: ", equipment_price_before_vat)
-    print("Price after VAT: ", equipment_price_after_vat)
-    print("Stock: ", equipment_units_in_stock)
 
 
 def insert_new_customer():
@@ -254,8 +247,9 @@ running = True # Determines whether we proceed through the menu or the user has 
 while running:
     option = show_menu() # Prints menu
     if option == 1: # New lifting equipment registration
-        print("\n\n\n")
+        print("\n")
         print_list_equipment(list_equipment)
+        print("\n")
         print("*** ADD NEW LIFTING EQUIPMENT DATA: ***")
         num_ID = register_equipment(num_ID)
 
