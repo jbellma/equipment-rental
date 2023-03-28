@@ -152,12 +152,26 @@ def show_menu():
         option = read_whole_positive("Please select an option (1-4): ")
     return option
 
-def register_equipment (num_ID):
+def print_dictionary_equipment(dictionary):
     '''
-    Function register equipment
+    Function that prints dictionary equipment
+    '''
+    for key in dictionary:
+        print(key, ":", dictionary[key])
+
+def print_list_equipment():
+    '''
+    Function that prints list of equipment
     '''
 
-    equipment = {}
+
+
+def register_equipment (num_ID):
+    '''
+    Function equipment registration
+    '''
+
+    equipment = {} # Dictionary equipment
 
     equipment['equipment_id'] = num_ID + 1 # We assign the following integer
     equipment['equipment_brand'] = read_brand("Please provide the lifting equipment's brand name (PALFINGER, KONE or SCHMALZ): ")
@@ -167,6 +181,12 @@ def register_equipment (num_ID):
     equipment['equipment_price_before_vat'] = read_float("Please input the cost of the lifting equipment, excluding VAT: ")
     equipment['equipment_price_after_vat'] = equipment['equipment_price_before_vat'] + equipment['equipment_price_before_vat']*(VAT/100)
     equipment['equipment_units_in_stock'] = read_integer("Please specify the number of lifting equipment units that are currently in stock: ")
+
+    list_equipment.append(equipment)
+    list_equipment_id.append(equipment['equipment_id'])
+
+    print("\n")
+    print_dictionary_equipment(equipment)
 
 
 
