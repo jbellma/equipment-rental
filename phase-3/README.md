@@ -135,11 +135,7 @@ Equipment and customer data can be modified at any moment.
                             4. Exit
 
                             Please select an option from the menu:
-                            
-                           
-                           
-                           
-                    
+                                          
 ---
 
 ### TASK 4: Lifting Equipment Rental
@@ -148,7 +144,20 @@ The appliacation will allow the user to enter information on new rental equipmen
 
 - ***NID*** of the client attempting to rent lifting gear: the application will verify that the user exists previousy in the system. Until the user enters an NID that is already registered in the system, the software will continuously request the ***NID***.
 
-FIGURE NEEDED
+                          Please select an option from the menu: 3
+                          NEW LIFTING EQUIPMENT RENTAL
+                          EQUIPMENT: [1, 2, 3]
+                          CUSTOMERS: ['12345678Z', '23456789D']
+                          
+                          Enter the lifting equipment identifier: 5
+                          Error, the equipment must be registered in the system: [1, 2, 3]
+                          
+                          Insert an existing lifting equipment's identification number: 3
+                          
+                          Enter the NID of the customer who is going to rent the lifting equipment: 123984761234
+                          Error, the customer must be registered in the system: ['12345678Z', '23456789D']
+                          
+                          Insert an existing customer's NID identification number: 12345678z
 
 - ***Identifier*** of the lifting equipment to be rented: the application will verify that the equipment exists previously in the system before being rented. For this last ***phase 3***, the application won't check to see whether more equipment is being rented than is available given its complexity.
 
@@ -156,7 +165,16 @@ FIGURE NEEDED
 but they will have to follow the following format "DD/MM/YYYY" at all times, requesting
 repeatedly until it is correct. 
 
-FIGURE NEEDED
+
+                           Please insert a date with a DD/MM/AAAA format: as/as/asdf
+                           Error, integers were expected to indicate DD, MM and AAAA. The expected format is DD/MM/AAAA.
+                           
+                           Please insert a date with a DD/MM/AAAA format: 1/11/2021
+                           
+                           Please insert a date with a DD/MM/AAAA format: 01/15/2021
+                           01/15/2021
+                           
+                                                     
 
 - Price without VAT: program will check if is a positive integer.
 
@@ -164,11 +182,33 @@ Rental data is very important to the company, so it will be necessary to store i
 
 To facilitate the user's work when inserting a new rental, the ***NID*** of all existing customers + the ***Identifiers*** of all lifting equipment will be shown previously on the screen as if they were two lists. A function will be created to return a list of ***NIDs*** of registered customers and another function to return a list of ***Identifiers*** of all registered lifting equipment. 
 
-Finally, to make it easier for the user to insert a suitable price, the lowest and highest price of the rentals that have already been made for that same lifting equipment will be displayed on the screen, displaying the message "no previous rentals have been made for that equipment” if none exists. 
+                           ******** MAIN MENU ********
+                           1. New Lifting Equipment
+                           2. New Customer
+                           3. New Lifting Equipment Rental
+                           4. Exit
+
+                           Please select an option from the menu: 3
+                           NEW LIFTING EQUIPMENT RENTAL
+                           EQUIPMENT: [1, 2, 3]
+                           CUSTOMERS: ['12345678Z', '23456789D']
+
+Finally, to make it easier for the user to insert a suitable price, the lowest and highest price of the rentals that have already been made for that same lifting equipment will be displayed on the screen, displaying the message ***"no previous rentals have been made for that equipment”*** if none exists. 
 
 A function will be created to accurately display all rentals.
-
-FIGURE NEEDED
+ 
+                           For equipment 3 the HIGHEST rental price so far is 300 and the lowest is 0
+                          
+                           Please type the rental price: 200
+                           ############## RENTALS ###############################################
+                           LIFTING EQUIPMENT 3
+                           - ['12345678Z', '11/11/1111', '11/11/1111', 300]
+                           - ['23456789D', '22/22/2222', '22/22/2222', 200]
+                           LIFTING EQUIPMENT 1
+                           - ['12345678Z', '11/11/1111', '11/11/1111', 250]
+                          
+                          
+                          
 
 
 
