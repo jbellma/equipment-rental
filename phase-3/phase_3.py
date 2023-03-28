@@ -139,11 +139,19 @@ def print_menu():
     print("3. New Lifting Equipment Rental")
     print("4. Exit")
 
+def show_menu():
+    '''
+    Prints menu.
+    '''
+    print_menu()
     option = read_whole_positive("Please select an option (1-4): ")
     while option<1 or option>4:
-        print("Error: invalid option")
+        print("There are four choices, numbered one through four.")
+        print("\n\n\n")
+        print_menu()
         option = read_whole_positive("Please select an option (1-4): ")
     return option
+
 
 
 def insert_new_lifting_equipment(equipment_id):
