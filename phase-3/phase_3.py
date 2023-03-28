@@ -141,7 +141,7 @@ def print_menu():
 
 def show_menu():
     '''
-    Prints menu.
+    Show menu.
     '''
     print_menu()
     option = read_whole_positive("Please select an option (1-4): ")
@@ -190,7 +190,7 @@ def insert_new_customer():
     name = input("Enter new customer's name: ")
     first_surname = input("Fill in new customer's first surname: ")
     second_surname = input("Complete new customer's second surname: ")
-    nid = read_nid("Enter new customer's NID with a 'NNNNNNNNL' format: ")
+    nid = read_letter_nid("Enter new customer's NID with a 'NNNNNNNNL' format: ")
     phone = read_phone_number("Type new customer's phone number with a 'NNNNNNNNN' format: ")
     address = input("Fill in new customer's address: ")
     return (name, first_surname, second_surname, nid, phone, address)
@@ -224,11 +224,12 @@ list_customers_nid = []
 
 
 # Constants
-VAT = 16  # consistently 16% VAT on all items
-num_ID = 0
+VAT = 16  # Consistently 16% VAT on all items
+num_ID = 0 # When the program launches, it begins by numbering  from number 1
 
-option = print_menu()
-while option !=4: # Depending on the selection entered, different actions are taken as long as the exit option has not been selected.
+running = True # Determines whether we proceed through the menu or the user has selected option 4
+while running:
+    option = show_menu()
     if option == 1:
         print("\n\n\n")
         print("NEW LIFTING EQUIPMENT")
