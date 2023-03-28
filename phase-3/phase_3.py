@@ -160,20 +160,14 @@ def register_equipment (num_ID):
     equipment = {}
 
     equipment['equipment_id'] = num_ID + 1 # We assign the following integer
+    equipment['equipment_brand'] = read_brand("Please provide the lifting equipment's brand name (PALFINGER, KONE or SCHMALZ): ")
+    equipment['equipment_model'] = convert_lowercase("Please specify the model's name of the lifting apparatus: ")
+    equipment['equipment_type'] = convert_lowercase("Please specify the equipment type: ")
+    equipment['equipment_description'] = convert_lowercase("Please enter the lifting equipment's description here: ")
+    equipment['equipment_price_before_vat'] = read_float("Please input the cost of the lifting equipment, excluding VAT: ")
+    equipment['equipment_price_after_vat'] = equipment['equipment_price_before_vat'] + equipment['equipment_price_before_vat']*(VAT/100)
+    equipment['equipment_units_in_stock'] = read_integer("Please specify the number of lifting equipment units that are currently in stock: ")
 
-def insert_new_lifting_equipment(equipment_id):
-    '''
-    Function that requests the new lifting equipment's data.
-    '''
-    equipment_id =  equipment_id + 1
-    equipment_brand = read_brand("Please provide the lifting equipment's brand name (PALFINGER, KONE or SCHMALZ): ")
-    equipment_model = input("Please specify the model's name of the lifting apparatus: ")
-    equipment_type = input("Please specify the equipment type: ")
-    equipment_description = input("Please enter the lifting equipment's description here: ")
-    equipment_price_before_vat = read_real_positive("Please input the cost of the lifting equipment, excluding VAT: ")
-    equipment_price_after_vat = equipment_price_before_vat + equipment_price_before_vat*(VAT/100)
-    equipment_units_in_stock = read_whole_positive("Please specify the number of lifting equipment units that are currently in stock: ")
-    return (equipment_id, equipment_brand, equipment_model, equipment_type, equipment_description, equipment_price_after_vat, equipment_price_after_vat, equipment_units_in_stock)
 
 
 def print_new_lifting_equipment(equipment_id, equipment_brand, equipment_model, equipment_type, equipment_description, equipment_price_before_vat, equipment_price_after_vat, equipment_units_in_stock):
