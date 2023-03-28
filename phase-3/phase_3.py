@@ -114,7 +114,10 @@ def read_phone_number(message):
         except ValueError:
             print("Error, enter a nine-digit phone number instead, please: ")
 
-
+def convert_lowercase(message):
+    string = input(message)
+    string = string.lower()
+    return string
 
 def print_menu():
     '''
