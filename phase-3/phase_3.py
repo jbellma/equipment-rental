@@ -67,6 +67,9 @@ def read_brand(message):
     return brand_type
 
 def read_length_nid(length_nid):
+    '''
+    Function
+    '''
     if len(length_nid) == 9:
         return True
     else:
@@ -74,6 +77,9 @@ def read_length_nid(length_nid):
         return False
 
 def read_eight_first_digits_nid(digit_nid):
+    '''
+    Function
+    '''
     nid = digit_nid
     raw_input_values = nid[:-1]
     numbers = '1234567890'
@@ -114,7 +120,13 @@ def read_phone_number(message):
         except ValueError:
             print("Error, enter a nine-digit phone number instead, please: ")
 
-
+def convert_lowercase(message):
+    '''
+    Function
+    '''
+    string = input(message)
+    string = string.lower()
+    return string
 
 def print_menu():
     '''
