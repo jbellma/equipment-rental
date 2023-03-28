@@ -66,6 +66,13 @@ def read_brand(message):
         brand_type = input(message)
     return brand_type
 
+def read_length_nid(length_nid):
+    if len(length_nid) == 9:
+        return True
+    else:
+        print("Error, please enter a 9-character NID.")
+        return False
+
 def read_eight_first_digits_nid(digit_nid):
     nid = digit_nid
     raw_input_values = nid[:-1]
