@@ -66,7 +66,24 @@ def read_brand(message):
         brand_type = input(message)
     return brand_type
 
-def read_nid(message):
+def read_length_nid(length_nid):
+    if len(length_nid) == 9:
+        return True
+    else:
+        print("Error, please enter a 9-character NID.")
+        return False
+
+def read_eight_first_digits_nid(digit_nid):
+    nid = digit_nid
+    raw_input_values = nid[:-1]
+    numbers = '1234567890'
+    for value in raw_input_values:
+        if value not in numbers:
+            print("Error, there must be numbers in the first 8 characters. Please provide a valid NID.")
+            return False
+    return True
+
+def read_letter_nid(message):
     '''
     A NID-requesting function that establishes its validity.
     '''
@@ -96,6 +113,7 @@ def read_phone_number(message):
                 return entry
         except ValueError:
             print("Error, enter a nine-digit phone number instead, please: ")
+
 
 
 def print_menu():
@@ -178,6 +196,12 @@ def print_new_customer(name, first_surname, second_surname, nid, phone, address)
     # Main Program
 
 ###########################
+
+allowedBrands = ("palfinger", "kone", "schmalz")
+
+list_equipment = []
+list_equipment_id = []
+
 
 # Constants
 VAT = 16  # consistently 16% VAT on all items
