@@ -56,15 +56,19 @@ def read_real_positive(message):
        except ValueError:
            print ("Error, please enter a real positive number: ")
 
-def read_brand(message):
+def read_brand(message, allowedBrands):
     '''
     Function that asks for a brand name and verifies until it is accurate.
     '''
     brand_type = input(message)
-    while brand_type != "PALFINGER" and brand_type !="KONE" and brand_type !="SCHMALZ":
-        print("Error, brand not allowed")
+    while True:
         brand_type = input(message)
-    return brand_type
+        brand_type = brand_type.lower()
+        for brand in allowedBrands:
+            if brand_type == brand:
+                return brand_type
+        print("Error, brand not allowed, insert a valid brand.")
+
 
 def read_length_nid(length_nid):
     '''
@@ -144,13 +148,13 @@ def show_menu():
     Show menu.
     '''
     print_menu()
-    option = read_whole_positive("Please select an option (1-4): ")
-    while option<1 or option>4:
+    option = read_integer("Please select an option (1-4): ")
+    while option < 1 or option > 4:
         print("There are four choices, numbered one through four.")
         print("\n\n\n")
         print_menu()
-        option = read_whole_positive("Please select an option (1-4): ")
-    return option
+        option = read_integer("Please select an option (1-4): ")
+    return (option)
 
 def print_dictionary_equipment(dictionary):
     '''
@@ -170,20 +174,20 @@ def print_list_equipment(list_equipment):
             print(header.upper().ljust(20), end = '\t')
         print("\n*************************************************************",end = "")
         print("****************************************************************",end = "")
-        print("*****************************************************************************")
+        print("***********************************************************************************")
         for equipment in list_equipment:
             for value in equipment.values():
-                print(str(value).ljust(30), end ='\t')
+                print(str(value).ljust(20), end ='\t')
             print()
 
-def register_equipment (num_ID):
+def register_equipment (num_id):
     '''
     Function equipment registration
     '''
 
     equipment = {} # Dictionary equipment
 
-    equipment['equipment_id'] = num_ID + 1 # We assign the following integer
+    equipment['equipment_id'] = int(num_id + 1) # We assign the following integer
     equipment['equipment_brand'] = read_brand("Please provide the lifting equipment's brand name (PALFINGER, KONE or SCHMALZ): ")
     equipment['equipment_model'] = convert_lowercase("Please specify the model's name of the lifting apparatus: ")
     equipment['equipment_type'] = convert_lowercase("Please specify the equipment type: ")
@@ -241,7 +245,7 @@ list_customers_nid = []
 
 # Constants
 VAT = 16  # Consistently 16% VAT on all items
-num_ID = 0 # When the program launches, it begins by numbering  from number 1
+num_id = 0 # When the program launches, it begins by numbering  from number 1
 
 running = True # Determines whether we proceed through the menu or the user has selected option 4
 while running:
@@ -251,7 +255,7 @@ while running:
         print_list_equipment(list_equipment)
         print("\n")
         print("*** ADD NEW LIFTING EQUIPMENT DATA: ***")
-        num_ID = register_equipment(num_ID)
+        num_id = register_equipment(num_id)
 
 
     elif option == 2 :
