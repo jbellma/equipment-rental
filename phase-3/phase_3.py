@@ -152,8 +152,6 @@ def show_menu():
         option = read_whole_positive("Please select an option (1-4): ")
     return option
 
-
-
 def insert_new_lifting_equipment(equipment_id):
     '''
     Function that requests the new lifting equipment's data.
