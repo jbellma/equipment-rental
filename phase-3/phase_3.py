@@ -187,8 +187,8 @@ def register_equipment (num_id):
 
     equipment = {} # Dictionary equipment
 
-    equipment['equipment_id'] = int(num_id + 1) # We assign the following integer
-    equipment['equipment_brand'] = read_brand("Please provide the lifting equipment's brand name (PALFINGER, KONE or SCHMALZ): ")
+    equipment['equipment_id'] = num_id + 1   # We assign the following integer
+    equipment['equipment_brand'] = read_brand("Please provide the lifting equipment's brand name (PALFINGER, KONE or SCHMALZ): ", allowedBrands)
     equipment['equipment_model'] = convert_lowercase("Please specify the model's name of the lifting apparatus: ")
     equipment['equipment_type'] = convert_lowercase("Please specify the equipment type: ")
     equipment['equipment_description'] = convert_lowercase("Please enter the lifting equipment's description here: ")
@@ -201,6 +201,8 @@ def register_equipment (num_id):
 
     print("\n")
     print_dictionary_equipment(equipment)
+
+    return equipment['equipment_id']
 
 
 def insert_new_customer():
@@ -256,7 +258,6 @@ while running:
         print("\n")
         print("*** ADD NEW LIFTING EQUIPMENT DATA: ***")
         num_id = register_equipment(num_id)
-
 
     elif option == 2 :
         print("\n\n\n")
