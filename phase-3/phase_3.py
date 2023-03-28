@@ -60,7 +60,6 @@ def read_brand(message, allowedBrands):
     '''
     Function that asks for a brand name and verifies until it is accurate.
     '''
-    brand_type = input(message)
     while True:
         brand_type = input(message)
         brand_type = brand_type.lower()
