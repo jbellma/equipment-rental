@@ -219,6 +219,8 @@ allowedBrands = ("palfinger", "kone", "schmalz")
 
 list_equipment = []
 list_equipment_id = []
+list_customers = []
+list_customers_nid = []
 
 
 # Constants
