@@ -109,18 +109,12 @@ def read_letter_nid(message):
         except ValueError:
             print("Error, please enter a valid NID")
 
-<<<<<<< HEAD
-def nid_verification(message, list_nid):
-=======
 def nid_verification(message, list_customers_nid):
->>>>>>> ph3_task3
     '''
     Function that confirms the legitimacy of a NID number
     '''
     while True:
         nid = input(message)
-<<<<<<< HEAD
-=======
         nid = nid.upper()
         try:
             if (read_length_nid(nid) == True) and (read_eight_first_digits_nid(nid) == True) and (read_letter_nid== True):
@@ -130,7 +124,6 @@ def nid_verification(message, list_customers_nid):
                     list_customers_nid_ordered_no_letter.append(number_nid)
                     for id in range(len(list_customers_nid_ordered_no_letter)):
 
->>>>>>> ph3_task3
 
 
 def read_phone_number(message):
@@ -267,21 +260,6 @@ def register_customer():
 
     print("\n")
     print_dictionary_customer(customer)
-
-<<<<<<< HEAD
-def print_new_customer(name, first_surname, second_surname, nid, phone, address):
-    '''
-    Function that prints the new customer's stored data.
-    '''
-    print ("\n\n\n")
-    print ("Name: ", name)
-    print ("First Surname: ", first_surname)
-    print ("Second Surname: ", second_surname)
-    print ("NID: ", nid)
-    print ("Address: ", address)
-=======
->>>>>>> ph3_task3
-
 
 
 ###########################
