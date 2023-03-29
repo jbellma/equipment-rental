@@ -267,6 +267,21 @@ def register_customer():
     print("\n")
     print_dictionary_customer(customer)
 
+def new_list_customers_ordered(list_customers_nid_ordered_no_letter, list_customers, list_customers_nid_ordered, list_customers_ordered):
+    '''
+    Function that registers customer information.
+    '''
+    for number in list_customers_nid_ordered_no_letter:
+        for customer in list_customers:
+            sequence = 'TRWAGMYFPDXBNJZSQVHLCKE'
+            string = str(number).zfill(8)
+            string = string + sequence[number%23]
+            if string == customer['nid']:
+                list_customers_ordered.append(customer)
+                list_customers_nid_ordered.append(customer['nid'])
+    return list_customers_ordered
+
+
 
 ###########################
 
@@ -305,7 +320,8 @@ while running:
         print("*** ADD NEW CUSTOMER DATA: ***")
         register_customer()
         print("\n")
-        print(list_customers_nid_ordered_no_letter)
+        new_list_customers_ordered(list_customers_nid_ordered_no_letter, list_customers, list_customers_nid_ordered, list_customers_ordered)
+        print_new_list_customers_ordered(list_customers_ordered)
 
 
 
