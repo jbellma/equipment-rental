@@ -195,10 +195,11 @@ def print_list_equipment(list_equipment):
             print(header.upper().ljust(20), end = '\t')
         print("\n*************************************************************",end = "")
         print("****************************************************************",end = "")
-        print("***********************************************************************************")
+        print("*****************************************************************",end = "")
+        print("***************************************************************************")
         for equipment in list_equipment:
             for value in equipment.values():
-                print(str(value).ljust(25), end ='\t')
+                print(str(value).ljust(20), end ='\t')
             print()
 
 def register_equipment (num_id):
