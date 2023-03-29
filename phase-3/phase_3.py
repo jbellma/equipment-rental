@@ -109,10 +109,12 @@ def read_letter_nid(message):
         except ValueError:
             print("Error, please enter a valid NID")
 
-def nid_verification():
+def nid_verification(message, list_nid):
     '''
     Function that confirms the legitimacy of a nNID number
     '''
+    while True:
+        nid = input(message)
 
 
 def read_phone_number(message):
@@ -244,6 +246,11 @@ def register_customer():
     customer['nid'] = nid_verification("Enter new customer's NID with a 'NNNNNNNNL' format: ")
     customer['phone'] = read_phone_number("Type new customer's phone number with a 'NNNNNNNNN' format: ")
     customer['address'] = convert_lowercase("Fill in new customer's address: ")
+
+    list_customers.append(customer)
+
+    print("\n")
+    print_dictionary_customer(customer)
 
 def print_new_customer(name, first_surname, second_surname, nid, phone, address):
     '''
