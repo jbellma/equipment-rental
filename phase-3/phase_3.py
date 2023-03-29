@@ -394,7 +394,7 @@ def print_dictionary_rentals(list_equipment_rentals):
 
 def equipment_not_in_use(list_equipment_id, list_equipment_rentals):
      '''
-    Function that prints an ordered list of customers.
+    Function that determines which equipment is still not in use
     '''
 
 
