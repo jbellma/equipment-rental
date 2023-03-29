@@ -308,6 +308,9 @@ def show_rentals_data(list_customers_nid_ordered, list_equipment_id):
     print(list_customers_nid_ordered)
 
 def read_register_identifier(message, list_equipment_id):
+    '''
+    Function that prints an ordered list of customers.
+    '''
     while True:
         rental_id = read_integer(message)
         if rental_id in list_equipment_id:
@@ -317,6 +320,9 @@ def read_register_identifier(message, list_equipment_id):
             print("Enter an existing lifting equipment identifier. ")
 
 def read_register_nid_customer(message,list_customers_nid_ordered):
+    '''
+    Function that prints an ordered list of customers.
+    '''
     while True:
         rental_customer = input(message).upper()
         if rental_customer in list_customers_nid_ordered:
@@ -326,11 +332,24 @@ def read_register_nid_customer(message,list_customers_nid_ordered):
             print("Enter an existing lifting equipment identifier. ")
     return
 
+def format_date(message):
+    '''
+    Function that prints an ordered list of customers.
+    '''
+
 
 def rental_equipment(list_equipment_id, list_customers_nid_ordered):
     '''
     Function that prints an ordered list of customers.
     '''
+
+    rental_equipment = {}
+
+    rental_equipment['equipment_id'] = read_register_identifier("Insert lifting equipment identifier: ",list_equipment_id)
+    rental_equipment['NID_Customer'] = read_register_nid_customer("Enter the client's ID who rents the lifting equipment: ",list_customers_nid_ordered)
+    rental_equipment['date_start'] = format_date("Please, enter a start date with a DD/MM/AAAA fromat: ")
+    rental_equipment['date_end'] = format_date("Please, enter an end date with a DD/MM/AAAA fromat: ")
+    rental_equipment['price'] = read_whole_positive("Please, enter rental service price: ")
 
 def print_dictionary_rentals(list_equipment_rentals):
     '''
