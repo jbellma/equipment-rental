@@ -379,6 +379,18 @@ def print_dictionary_rentals(list_equipment_rentals):
         dictionary_rental[newkey]=[]
     print("\n")
 
+    for equipment in list_equipment_rentals:
+        dictionary_rental[equipment['equipment_id']].append(equipment)
+
+    print("################################################# RENTALS #####################################################")
+    print("\n")
+
+    for key, value in dictionary_rental.items():
+        print(f"LIFTING EQUIPMENT: {key}")
+        for rental in value:
+            list_values = list(rental.values())
+            print(list_values)
+
 
 def equipment_not_in_use(list_equipment_id, list_equipment_rentals):
      '''
