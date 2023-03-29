@@ -92,22 +92,19 @@ def read_eight_first_digits_nid(digit_nid):
             return False
     return True
 
-def read_letter_nid(message):
+def read_letter_nid(num_id):
     '''
     A NID-requesting function that establishes its validity.
     '''
-    while True:
-        raw_nid = input(message)
-        number = int(raw_nid [:-1]) # Separating the letter from the corresponding number.
-        sequence = "TRWAGMYFPDXBNJZSQVHLCKE"
-        correct_letter = sequence[number%23] # By dividing the number on your identity card by 23, you may determine the letter of your NID. This division leaves you with a remainder, and each one of them has a letter assigned to it.
-        try:
-            if correct_letter != raw_nid [-1]:
-                raise ValueError
-            else:
-                return raw_nid
-        except ValueError:
-            print("Error, please enter a valid NID")
+    raw_nid = input(num_id)
+    number = int(raw_nid [:-1]) # Separating the letter from the corresponding number.
+    sequence = "TRWAGMYFPDXBNJZSQVHLCKE"
+    correct_letter = sequence[number%23] # By dividing the number on your identity card by 23, you may determine the letter of your NID. This division leaves you with a remainder, and each one of them has a letter assigned to it.
+    if correct_letter == raw_nid.upper() [-1]:
+        return True
+    else:
+        print(f"Error, {raw_nid} is not valid.")
+        return False
 
 def nid_verification(message, list_customers_nid):
     '''
@@ -308,6 +305,11 @@ while running:
     elif option == 2: # New customer data registration
         print("\n")
         print("*** ADD NEW CUSTOMER DATA: ***")
+        register_customer()
+        print("\n")
+        list_customers_nid_ordered = []
+
+
 
 
     elif option == 3:
