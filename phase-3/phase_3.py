@@ -370,8 +370,15 @@ def rental_equipment(list_equipment_id, list_customers_nid_ordered):
 
 def print_dictionary_rentals(list_equipment_rentals):
     '''
-    Function that prints an ordered list of customers.
+    Function that stores, orders and prints all rentals.
     '''
+    dictionary_rental = {}
+
+    for equipment in list_equipment_rentals:
+        newkey = equipment['equipment_id']
+        dictionary_rental[newkey]=[]
+    print("\n")
+
 
 def equipment_not_in_use(list_equipment_id, list_equipment_rentals):
      '''
