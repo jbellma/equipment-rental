@@ -245,6 +245,11 @@ def register_customer():
     customer['phone'] = read_phone_number("Type new customer's phone number with a 'NNNNNNNNN' format: ")
     customer['address'] = convert_lowercase("Fill in new customer's address: ")
 
+    list_customers.append(customer)
+
+    print("\n")
+    print_dictionary_customer(customer)
+
 def print_new_customer(name, first_surname, second_surname, nid, phone, address):
     '''
     Function that prints the new customer's stored data.
