@@ -68,7 +68,6 @@ def read_brand(message, allowedBrands):
                 return brand_type
         print("Error, brand not allowed, insert a valid brand.")
 
-
 def read_length_nid(length_nid):
     '''
     Function
@@ -352,7 +351,6 @@ def format_date(message):
         else:
             print("Error, ten characters are needed for the date.")
 
-
 def rental_equipment(list_equipment_id, list_customers_nid_ordered):
     '''
     Function that prints an ordered list of customers.
@@ -391,7 +389,6 @@ def print_dictionary_rentals(list_equipment_rentals):
             list_values = list(rental.values())
             print(list_values)
 
-
 def equipment_not_in_use(list_equipment_id, list_equipment_rentals):
     '''
     Function that determines which equipment is still not in use
@@ -400,7 +397,6 @@ def equipment_not_in_use(list_equipment_id, list_equipment_rentals):
 
     for equipment in list_equipment_rentals:
         list_used.append(equipment['equipment_id'])
-
 
     for id in list_equipment_id:
         if id not in list_used:
