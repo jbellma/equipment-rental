@@ -204,6 +204,27 @@ def register_equipment (num_id):
     return equipment['equipment_id']
 
 
+def print_dictionary_customer(dictionary):
+    '''
+    Function that prints customer dictionary.
+    '''
+    for key in dictionary:
+        print(key, ":", dictionary[key])
+
+def print_list_customers(list_customers):
+    '''
+    Function that prints listof customers.
+    '''
+    for header in list_customers[0].keys():
+        print(header.upper().ljust(30), end = '\t')
+    print("\n*************************************************************",end = "")
+    print("****************************************************************",end = "")
+    print("***********************************************************************************")
+    for customer in list_customers:
+        for value in customer.values():
+            print(str(value).ljust(30), end ='\t')
+        print()
+
 def insert_new_customer():
     '''
     Function that requests the new client's data.
