@@ -157,14 +157,14 @@ def show_menu():
 
 def print_dictionary_equipment(dictionary):
     '''
-    Function that prints dictionary equipment
+    Function that prints dictionary equipment.
     '''
     for key in dictionary:
         print(key, ":", dictionary[key])
 
 def print_list_equipment(list_equipment):
     '''
-    Function that prints list of equipment
+    Function that prints list of equipment.
     '''
     if len(list_equipment) == 0:
         print("There are no items to display yet...")
@@ -181,7 +181,7 @@ def print_list_equipment(list_equipment):
 
 def register_equipment (num_id):
     '''
-    Function equipment registration
+    Function equipment registration.
     '''
 
     equipment = {} # Dictionary equipment
@@ -268,6 +268,7 @@ while running:
         print("\n\n\n")
         print("NEW LIFTING EQUIPMENT RENTAL")
 
-    option = print_menu()
+    elif option == 4:
+        running = False
 
 print("END")
