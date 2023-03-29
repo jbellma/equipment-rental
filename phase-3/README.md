@@ -119,11 +119,11 @@ Equipment and customer data can be modified at any moment.
                            
         
                             ## CUSTOMERS: ##
-                            NAME       SURNAME1   SURNAME2       NID         PHONE      ADDRESS     
-                            ===        =====      ========      ========     =====      =======     
-                            laura      moon       donegal       12345678Z      918273645  ann square, 1
-                            maria      hololan    richards      23456789D      928374628  clogersaint, 4
-                            john       williams   valentine     34567890V      918273645  kinsal, 7
+                            NAME       SURNAME1   SURNAME2       NID         PHONE          ADDRESS     
+                            ===        =====      ========      ========     =====          =======     
+                            laura      moon       donegal       12345678Z      918273645    ann square, 1
+                            maria      hololan    richards      23456789D      928374628    clogersaint, 4
+                            john       williams   valentine     34567890V      918273645    kinsal, 7
                             
                             
                             
