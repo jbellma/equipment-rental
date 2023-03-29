@@ -109,10 +109,21 @@ def read_letter_nid(message):
         except ValueError:
             print("Error, please enter a valid NID")
 
-def nid_verification():
+def nid_verification(message, list_customers_nid):
     '''
-    Function that confirms the legitimacy of a nNID number
+    Function that confirms the legitimacy of a NID number
     '''
+    while True:
+        nid = input(message)
+        nid = nid.upper()
+        try:
+            if (read_length_nid(nid) == True) and (read_eight_first_digits_nid(nid) == True) and (read_letter_nid== True):
+                if nid not in list_customers_nid:
+                    list_customers_nid.append(nid)
+                    number_nid = int(nid[:-1])
+                    list_customers_nid_ordered_no_letter.append(number_nid)
+                    for id in range(len(list_customers_nid_ordered_no_letter)):
+
 
 
 def read_phone_number(message):
@@ -241,20 +252,15 @@ def register_customer():
     customer['name'] = convert_lowercase("Enter new customer's name: ")
     customer['first_surname'] = convert_lowercase("Fill in new customer's first surname: ")
     customer['second_surname'] = convert_lowercase("Complete new customer's second surname: ")
-    customer['nid'] = nid_verification("Enter new customer's NID with a 'NNNNNNNNL' format: ")
+    customer['nid'] = nid_verification("Enter new customer's NID with a 'NNNNNNNNL' format: ", list_customers_nid)
     customer['phone'] = read_phone_number("Type new customer's phone number with a 'NNNNNNNNN' format: ")
     customer['address'] = convert_lowercase("Fill in new customer's address: ")
 
-def print_new_customer(name, first_surname, second_surname, nid, phone, address):
-    '''
-    Function that prints the new customer's stored data.
-    '''
-    print ("\n\n\n")
-    print ("Name: ", name)
-    print ("First Surname: ", first_surname)
-    print ("Second Surname: ", second_surname)
-    print ("NID: ", nid)
-    print ("Address: ", address)
+    list_customers.append(customer)
+
+    print("\n")
+    print_dictionary_customer(customer)
+
 
 
 
@@ -270,6 +276,10 @@ list_equipment = []
 list_equipment_id = []
 list_customers = []
 list_customers_nid = []
+list_customers_nid_ordered_no_letter = []
+list_customers_nid_ordered = []
+list_customers_ordered = []
+list_equipment_rentals = []
 
 
 # Constants
@@ -286,14 +296,15 @@ while running:
         print("*** ADD NEW LIFTING EQUIPMENT DATA: ***")
         num_id = register_equipment(num_id)
 
-    elif option == 2 :
-        print("\n\n\n")
-        print("NEW CUSTOMER")
+    elif option == 2: # New customer data registration
+        print("\n")
+        print("*** ADD NEW CUSTOMER DATA: ***")
 
 
     elif option == 3:
         print("\n\n\n")
-        print("NEW LIFTING EQUIPMENT RENTAL")
+
+
 
     elif option == 4:
         running = False
