@@ -275,6 +275,10 @@ list_equipment = []
 list_equipment_id = []
 list_customers = []
 list_customers_nid = []
+list_customers_nid_ordered_no_letter = []
+list_customers_nid_ordered = []
+list_customers_ordered = []
+list_equipment_rentals = []
 
 
 # Constants
@@ -291,14 +295,15 @@ while running:
         print("*** ADD NEW LIFTING EQUIPMENT DATA: ***")
         num_id = register_equipment(num_id)
 
-    elif option == 2 :
-        print("\n\n\n")
-        print("NEW CUSTOMER")
+    elif option == 2: # New customer data registration
+        print("\n")
+        print("*** ADD NEW CUSTOMER DATA: ***")
 
 
     elif option == 3:
         print("\n\n\n")
-        print("NEW LIFTING EQUIPMENT RENTAL")
+
+
 
     elif option == 4:
         running = False
