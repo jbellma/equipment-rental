@@ -109,6 +109,8 @@ def read_letter_nid(message):
         except ValueError:
             print("Error, please enter a valid NID")
 
+def nid_verification():
+
 def read_phone_number(message):
     '''
     Function that confirms the legitimacy of a phone number.
@@ -213,7 +215,7 @@ def print_dictionary_customer(dictionary):
 
 def print_list_customers(list_customers):
     '''
-    Function that prints listof customers.
+    Function that prints list of customers.
     '''
     for header in list_customers[0].keys():
         print(header.upper().ljust(30), end = '\t')
@@ -225,18 +227,19 @@ def print_list_customers(list_customers):
             print(str(value).ljust(30), end ='\t')
         print()
 
-def insert_new_customer():
+def register_customer():
     '''
-    Function that requests the new client's data.
+    Function that registers customer information.
     '''
-    name = input("Enter new customer's name: ")
-    first_surname = input("Fill in new customer's first surname: ")
-    second_surname = input("Complete new customer's second surname: ")
-    nid = read_letter_nid("Enter new customer's NID with a 'NNNNNNNNL' format: ")
-    phone = read_phone_number("Type new customer's phone number with a 'NNNNNNNNN' format: ")
-    address = input("Fill in new customer's address: ")
-    return (name, first_surname, second_surname, nid, phone, address)
 
+    customer = {}
+
+    customer['name'] = convert_lowercase("Enter new customer's name: ")
+    customer['first_surname'] = convert_lowercase("Fill in new customer's first surname: ")
+    customer['second_surname'] = convert_lowercase("Complete new customer's second surname: ")
+    customer['nid'] = nid_verification("Enter new customer's NID with a 'NNNNNNNNL' format: ")
+    customer['phone'] = read_phone_number("Type new customer's phone number with a 'NNNNNNNNN' format: ")
+    customer['address'] = convert_lowercase("Fill in new customer's address: ")
 
 def print_new_customer(name, first_surname, second_surname, nid, phone, address):
     '''
