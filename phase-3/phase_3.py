@@ -109,6 +109,12 @@ def read_letter_nid(message):
         except ValueError:
             print("Error, please enter a valid NID")
 
+def nid_verification():
+    '''
+    Function that confirms the legitimacy of a nNID number
+    '''
+
+
 def read_phone_number(message):
     '''
     Function that confirms the legitimacy of a phone number.
@@ -157,14 +163,14 @@ def show_menu():
 
 def print_dictionary_equipment(dictionary):
     '''
-    Function that prints dictionary equipment
+    Function that prints dictionary equipment.
     '''
     for key in dictionary:
         print(key, ":", dictionary[key])
 
 def print_list_equipment(list_equipment):
     '''
-    Function that prints list of equipment
+    Function that prints list of equipment.
     '''
     if len(list_equipment) == 0:
         print("There are no items to display yet...")
@@ -181,7 +187,7 @@ def print_list_equipment(list_equipment):
 
 def register_equipment (num_id):
     '''
-    Function equipment registration
+    Function equipment registration.
     '''
 
     equipment = {} # Dictionary equipment
@@ -204,18 +210,40 @@ def register_equipment (num_id):
     return equipment['equipment_id']
 
 
-def insert_new_customer():
+def print_dictionary_customer(dictionary):
     '''
-    Function that requests the new client's data.
+    Function that prints customer dictionary.
     '''
-    name = input("Enter new customer's name: ")
-    first_surname = input("Fill in new customer's first surname: ")
-    second_surname = input("Complete new customer's second surname: ")
-    nid = read_letter_nid("Enter new customer's NID with a 'NNNNNNNNL' format: ")
-    phone = read_phone_number("Type new customer's phone number with a 'NNNNNNNNN' format: ")
-    address = input("Fill in new customer's address: ")
-    return (name, first_surname, second_surname, nid, phone, address)
+    for key in dictionary:
+        print(key, ":", dictionary[key])
 
+def print_list_customers(list_customers):
+    '''
+    Function that prints list of customers.
+    '''
+    for header in list_customers[0].keys():
+        print(header.upper().ljust(30), end = '\t')
+    print("\n*************************************************************",end = "")
+    print("****************************************************************",end = "")
+    print("***********************************************************************************")
+    for customer in list_customers:
+        for value in customer.values():
+            print(str(value).ljust(30), end ='\t')
+        print()
+
+def register_customer():
+    '''
+    Function that registers customer information.
+    '''
+
+    customer = {} # Dictionary customer
+
+    customer['name'] = convert_lowercase("Enter new customer's name: ")
+    customer['first_surname'] = convert_lowercase("Fill in new customer's first surname: ")
+    customer['second_surname'] = convert_lowercase("Complete new customer's second surname: ")
+    customer['nid'] = nid_verification("Enter new customer's NID with a 'NNNNNNNNL' format: ")
+    customer['phone'] = read_phone_number("Type new customer's phone number with a 'NNNNNNNNN' format: ")
+    customer['address'] = convert_lowercase("Fill in new customer's address: ")
 
 def print_new_customer(name, first_surname, second_surname, nid, phone, address):
     '''
@@ -261,13 +289,13 @@ while running:
     elif option == 2 :
         print("\n\n\n")
         print("NEW CUSTOMER")
-        (name, first_sur, second_sur, nid, phon, addre) = insert_new_customer()
-        print_new_customer(name, first_sur, second_sur, nid, phon, addre)
+
 
     elif option == 3:
         print("\n\n\n")
         print("NEW LIFTING EQUIPMENT RENTAL")
 
-    option = print_menu()
+    elif option == 4:
+        running = False
 
 print("END")
