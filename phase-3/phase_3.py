@@ -295,7 +295,25 @@ def print_new_list_customers_ordered(ordered_list):
             print(str(value).ljust(30), end ='\t')
         print()
 
+def show_rentals_data(list_customers_nid_ordered, list_equipment_id):
+    '''
+    Function that prints an ordered list of customers.
+    '''
 
+def rental_equipment(list_equipment_id, list_customers_nid_ordered):
+    '''
+    Function that prints an ordered list of customers.
+    '''
+
+def print_dictionary_rentals(list_equipment_rentals):
+    '''
+    Function that prints an ordered list of customers.
+    '''
+
+def equipment_not_in_use(list_equipment_id, list_equipment_rentals):
+     '''
+    Function that prints an ordered list of customers.
+    '''
 
 
 ###########################
@@ -340,7 +358,22 @@ while running:
         list_customers_ordered = []
 
     elif option == 3:
-        print("\n\n\n")
+        print("\n")
+        print("*** ADD NEW LIFTING EQUIPMENT RENTAL: ***")
+
+        if len(list_customers_nid) == 0 and len(list_equipment_id) == 0:
+            print("Error, no liftinng equipment and no customers in the data base. Add equipment and clients.")
+        if len(list_customers_nid) == 0:
+            print("Error, no customers in the data base. Add clients.")
+        if len(list_equipment_id) == 0:
+            print("Error, no lifting equipment in the data base. Add lifting equipment.")
+        else:
+            show_rentals_data(list_customers_nid_ordered, list_equipment_id)
+            rental_equipment(list_equipment_id, list_customers_nid_ordered)
+            print_dictionary_rentals(list_equipment_rentals)
+            print("\n")
+            print("\n")
+            equipment_not_in_use(list_equipment_id, list_equipment_rentals)
 
     elif option == 4:
         running = False
