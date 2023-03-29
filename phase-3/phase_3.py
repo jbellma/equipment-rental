@@ -110,6 +110,10 @@ def read_letter_nid(message):
             print("Error, please enter a valid NID")
 
 def nid_verification():
+    '''
+    Function that confirms the legitimacy of a nNID number
+    '''
+
 
 def read_phone_number(message):
     '''
@@ -232,7 +236,7 @@ def register_customer():
     Function that registers customer information.
     '''
 
-    customer = {}
+    customer = {} # Dictionary customer
 
     customer['name'] = convert_lowercase("Enter new customer's name: ")
     customer['first_surname'] = convert_lowercase("Fill in new customer's first surname: ")
@@ -285,8 +289,7 @@ while running:
     elif option == 2 :
         print("\n\n\n")
         print("NEW CUSTOMER")
-        (name, first_sur, second_sur, nid, phon, addre) = insert_new_customer()
-        print_new_customer(name, first_sur, second_sur, nid, phon, addre)
+
 
     elif option == 3:
         print("\n\n\n")
