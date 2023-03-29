@@ -92,22 +92,19 @@ def read_eight_first_digits_nid(digit_nid):
             return False
     return True
 
-def read_letter_nid(message):
+def read_letter_nid(num_id):
     '''
     A NID-requesting function that establishes its validity.
     '''
-    while True:
-        raw_nid = input(message)
-        number = int(raw_nid [:-1]) # Separating the letter from the corresponding number.
-        sequence = "TRWAGMYFPDXBNJZSQVHLCKE"
-        correct_letter = sequence[number%23] # By dividing the number on your identity card by 23, you may determine the letter of your NID. This division leaves you with a remainder, and each one of them has a letter assigned to it.
-        try:
-            if correct_letter != raw_nid [-1]:
-                raise ValueError
-            else:
-                return raw_nid
-        except ValueError:
-            print("Error, please enter a valid NID")
+    raw_nid = num_id
+    number = int(raw_nid [:-1]) # Separating the letter from the corresponding number.
+    sequence = "TRWAGMYFPDXBNJZSQVHLCKE"
+    correct_letter = sequence[number%23] # By dividing the number on your identity card by 23, you may determine the letter of your NID. This division leaves you with a remainder, and each one of them has a letter assigned to it.
+    if correct_letter == raw_nid.upper() [-1]:
+        return True
+    else:
+        print(f"Error, {raw_nid} is not valid.")
+        return False
 
 def nid_verification(message, list_customers_nid):
     '''
@@ -117,14 +114,23 @@ def nid_verification(message, list_customers_nid):
         nid = input(message)
         nid = nid.upper()
         try:
-            if (read_length_nid(nid) == True) and (read_eight_first_digits_nid(nid) == True) and (read_letter_nid== True):
+            if (read_length_nid(nid) == True) and (read_eight_first_digits_nid(nid) == True) and (read_letter_nid(nid)== True):
                 if nid not in list_customers_nid:
                     list_customers_nid.append(nid)
                     number_nid = int(nid[:-1])
                     list_customers_nid_ordered_no_letter.append(number_nid)
                     for id in range(len(list_customers_nid_ordered_no_letter)):
-
-
+                        for id_pos in range(len(list_customers_nid_ordered_no_letter) - 1):
+                            if list_customers_nid_ordered_no_letter[id_pos] > list_customers_nid_ordered_no_letter[id_pos + 1]:
+                                list_customers_nid_ordered_no_letter[id_pos + 1], list_customers_nid_ordered_no_letter[id_pos] = list_customers_nid_ordered_no_letter[id_pos], list_customers_nid_ordered_no_letter[id_pos + 1]
+                    return nid
+                else:
+                    print("Error, that NID already exists, enter another NID.")
+                    raise ValueError
+            else:
+                raise ValueError
+        except ValueError:
+            print("Please, insert a valid NID.")
 
 def read_phone_number(message):
     '''
@@ -297,6 +303,12 @@ while running:
     elif option == 2: # New customer data registration
         print("\n")
         print("*** ADD NEW CUSTOMER DATA: ***")
+        register_customer()
+        print("\n")
+        print(list_customers_nid_ordered_no_letter)
+
+
+
 
 
     elif option == 3:
