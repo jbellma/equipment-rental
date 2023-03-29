@@ -96,7 +96,7 @@ def read_letter_nid(num_id):
     '''
     A NID-requesting function that establishes its validity.
     '''
-    raw_nid = input(num_id)
+    raw_nid = num_id
     number = int(raw_nid [:-1]) # Separating the letter from the corresponding number.
     sequence = "TRWAGMYFPDXBNJZSQVHLCKE"
     correct_letter = sequence[number%23] # By dividing the number on your identity card by 23, you may determine the letter of your NID. This division leaves you with a remainder, and each one of them has a letter assigned to it.
@@ -114,7 +114,7 @@ def nid_verification(message, list_customers_nid):
         nid = input(message)
         nid = nid.upper()
         try:
-            if (read_length_nid(nid) == True) and (read_eight_first_digits_nid(nid) == True) and (read_letter_nid== True):
+            if (read_length_nid(nid) == True) and (read_eight_first_digits_nid(nid) == True) and (read_letter_nid(nid)== True):
                 if nid not in list_customers_nid:
                     list_customers_nid.append(nid)
                     number_nid = int(nid[:-1])
