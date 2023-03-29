@@ -269,7 +269,7 @@ def register_customer():
 
 def new_list_customers_ordered(list_customers_nid_ordered_no_letter, list_customers, list_customers_nid_ordered, list_customers_ordered):
     '''
-    Function that registers customer information.
+    Function that rearranges list of customers in order.
     '''
     for number in list_customers_nid_ordered_no_letter:
         for customer in list_customers:
@@ -280,6 +280,21 @@ def new_list_customers_ordered(list_customers_nid_ordered_no_letter, list_custom
                 list_customers_ordered.append(customer)
                 list_customers_nid_ordered.append(customer['nid'])
     return list_customers_ordered
+
+def print_new_list_customers_ordered(ordered_list):
+    '''
+    Function that prints n ordered list of customers.
+    '''
+    for header in ordered_list[0].keys():
+        print(header.upper().ljust(30), end = '\t')
+    print("\n*************************************************************",end = "")
+    print("****************************************************************",end = "")
+    print("***************************************************")
+    for customer in ordered_list:
+        for value in customer.values():
+            print(value.ljust(30), end ='\t')
+        print()
+
 
 
 
