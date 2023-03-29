@@ -393,9 +393,18 @@ def print_dictionary_rentals(list_equipment_rentals):
 
 
 def equipment_not_in_use(list_equipment_id, list_equipment_rentals):
-     '''
+    '''
     Function that determines which equipment is still not in use
     '''
+    list_used = []
+
+    for equipment in list_equipment_rentals:
+        list_used.append(equipment['equipment_id'])
+
+
+    for id in list_equipment_id:
+        if id not in list_used:
+            print(f"No previous rentals have been made for the equipment {id}")
 
 
 ###########################
