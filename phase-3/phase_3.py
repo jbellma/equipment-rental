@@ -297,7 +297,7 @@ def print_new_list_customers_ordered(ordered_list):
 
 def show_rentals_data(list_customers_nid_ordered, list_equipment_id):
     '''
-    Function that prints an ordered list of customers.
+    Function that shows rental information.
     '''
     print("\n\n")
     print("NEW LIFTING EQUIPMENT RENTAL")
@@ -309,7 +309,7 @@ def show_rentals_data(list_customers_nid_ordered, list_equipment_id):
 
 def read_register_identifier(message, list_equipment_id):
     '''
-    Function that prints an ordered list of customers.
+    Function that verifies equipment's existance.
     '''
     while True:
         rental_id = read_integer(message)
@@ -321,7 +321,7 @@ def read_register_identifier(message, list_equipment_id):
 
 def read_register_nid_customer(message,list_customers_nid_ordered):
     '''
-    Function that prints an ordered list of customers.
+    Function that verifies customers' existance.
     '''
     while True:
         rental_customer = input(message).upper()
@@ -334,8 +334,23 @@ def read_register_nid_customer(message,list_customers_nid_ordered):
 
 def format_date(message):
     '''
-    Function that prints an ordered list of customers.
+    Function that verifies date format.
     '''
+    while True:
+        entry = input(message)
+        if len(entry) == 10:
+            if entry[2] == "/" and entry[5] == "/":
+                try:
+                    int(entry[0:2])
+                    int(entry[3:5])
+                    int(entry[6:10])
+                    return entry
+                except ValueError:
+                    print("Error, positive integers are needed.")
+            else:
+                print("Error, slashes are needed at positions two and five of the string.")
+        else:
+            print("Error, ten characters are needed for the date.")
 
 
 def rental_equipment(list_equipment_id, list_customers_nid_ordered):
@@ -350,6 +365,8 @@ def rental_equipment(list_equipment_id, list_customers_nid_ordered):
     rental_equipment['date_start'] = format_date("Please, enter a start date with a DD/MM/AAAA fromat: ")
     rental_equipment['date_end'] = format_date("Please, enter an end date with a DD/MM/AAAA fromat: ")
     rental_equipment['price'] = read_whole_positive("Please, enter rental service price: ")
+
+    list_equipment_rentals.append(rental_equipment)
 
 def print_dictionary_rentals(list_equipment_rentals):
     '''
