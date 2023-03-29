@@ -307,7 +307,8 @@ while running:
         print("*** ADD NEW CUSTOMER DATA: ***")
         register_customer()
         print("\n")
-        list_customers_nid_ordered = []
+        print(list_customers_nid_ordered_no_letter)
+
 
 
 
