@@ -283,7 +283,7 @@ def new_list_customers_ordered(list_customers_nid_ordered_no_letter, list_custom
 
 def print_new_list_customers_ordered(ordered_list):
     '''
-    Function that prints n ordered list of customers.
+    Function that prints an ordered list of customers.
     '''
     for header in ordered_list[0].keys():
         print(header.upper().ljust(30), end = '\t')
@@ -292,7 +292,7 @@ def print_new_list_customers_ordered(ordered_list):
     print("***************************************************")
     for customer in ordered_list:
         for value in customer.values():
-            print(value.ljust(30), end ='\t')
+            print(str(value).ljust(30), end ='\t')
         print()
 
 
@@ -337,15 +337,10 @@ while running:
         print("\n")
         new_list_customers_ordered(list_customers_nid_ordered_no_letter, list_customers, list_customers_nid_ordered, list_customers_ordered)
         print_new_list_customers_ordered(list_customers_ordered)
-
-
-
-
+        list_customers_ordered = []
 
     elif option == 3:
         print("\n\n\n")
-
-
 
     elif option == 4:
         running = False
