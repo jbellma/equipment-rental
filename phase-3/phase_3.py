@@ -123,8 +123,17 @@ def nid_verification(message, list_customers_nid):
                     number_nid = int(nid[:-1])
                     list_customers_nid_ordered_no_letter.append(number_nid)
                     for id in range(len(list_customers_nid_ordered_no_letter)):
-
-
+                        for id_pos in range(len(list_customers_nid_ordered_no_letter) - 1):
+                            if list_customers_nid_ordered_no_letter[id_pos] > list_customers_nid_ordered_no_letter[id_pos + 1]:
+                                list_customers_nid_ordered_no_letter[id_pos + 1], list_customers_nid_ordered_no_letter[id_pos] = list_customers_nid_ordered_no_letter[id_pos], list_customers_nid_ordered_no_letter[id_pos + 1]
+                    return nid
+                else:
+                    print("Error, that NID already exists, enter another NID.")
+                    raise ValueError
+            else:
+                raise ValueError
+        except ValueError:
+            print("Please, insert a valid NID.")
 
 def read_phone_number(message):
     '''
