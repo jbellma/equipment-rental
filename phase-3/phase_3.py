@@ -307,7 +307,7 @@ def show_rentals_data(list_customers_nid_ordered, list_equipment_id):
     print("CUSTOMERS: ",end = '')
     print(list_customers_nid_ordered)
 
-def read_register_identifier(message, list_equipment_id): # Función que comprueba si el equipo está registrado o no en el sistema.
+def read_register_identifier(message, list_equipment_id):
     while True:
         rental_id = read_integer(message)
         if rental_id in list_equipment_id:
@@ -315,6 +315,16 @@ def read_register_identifier(message, list_equipment_id): # Función que comprue
         else:
             print(f"Error, the equipment must be registered in the system:: {list_equipment_id}. ")
             print("Enter an existing lifting equipment identifier. ")
+
+def read_register_nid_customer(message,list_customers_nid_ordered):
+    while True:
+        rental_customer = input(message).upper()
+        if rental_customer in list_customers_nid_ordered:
+            return rental_customer
+        else:
+            print(f"Error, the customer must be registered in the system:: {list_customers_nid_ordered}. ")
+            print("Enter an existing lifting equipment identifier. ")
+    return
 
 
 def rental_equipment(list_equipment_id, list_customers_nid_ordered):
