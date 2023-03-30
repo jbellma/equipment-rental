@@ -169,7 +169,7 @@ def print_menu():
     '''
     This function prints the program menu on the screen.
     INPUT: None.
-    OUTPUT: Nane.
+    OUTPUT: None.
     EXCEPTIONS: It does not raise exceptions.
     '''
     print("\n\n\n")
