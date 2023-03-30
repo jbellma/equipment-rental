@@ -10,7 +10,7 @@ It should be understood ***phase 3*** as a continuation of the second phase. Unl
 
 ---
 
-### Phase 2: Tasks to be Completed
+### Phase 3: Tasks to be Completed
 
 - Task 1: The code will be completely error-free and capture errors with exceptions.
 
