@@ -1,3 +1,14 @@
+"""
+Proyect status: COMPLETED
+
+Author: Jose Bello
+
+Phase 3: Storage and rental of products.
+
+"""
+
+
+
 ###########################
 
     # Functions
@@ -18,7 +29,7 @@ def read_integer(message):
 
 def read_whole_positive(message):
     '''
-    An integer-requesting function that verifies it using exceptions till it is accurate.
+    A positive integer-requesting function that verifies it using exceptions till it is accurate.
     '''
     while True:
         entry = input(message)
@@ -58,7 +69,8 @@ def read_real_positive(message):
 
 def read_brand(message, allowedBrands):
     '''
-    Function that asks for a brand name and verifies until it is accurate.
+
+    Function that requests and checks if the brand entered corresponds to one of the allowed brands.
     '''
     while True:
         brand_type = input(message)
@@ -70,7 +82,7 @@ def read_brand(message, allowedBrands):
 
 def read_length_nid(length_nid):
     '''
-    Function
+    Function that checks if the NID entered has nine characters.
     '''
     if len(length_nid) == 9:
         return True
@@ -80,7 +92,7 @@ def read_length_nid(length_nid):
 
 def read_eight_first_digits_nid(digit_nid):
     '''
-    Function
+    Function that checks if the first eight characters of the NID are numbers.
     '''
     nid = digit_nid
     raw_input_values = nid[:-1]
@@ -93,7 +105,7 @@ def read_eight_first_digits_nid(digit_nid):
 
 def read_letter_nid(num_id):
     '''
-    A NID-requesting function that establishes its validity.
+    Function that checks by means of the confirmation letter if the NID entered is valid or not.
     '''
     raw_nid = num_id
     number = int(raw_nid [:-1]) # Separating the letter from the corresponding number.
@@ -107,7 +119,7 @@ def read_letter_nid(num_id):
 
 def nid_verification(message, list_customers_nid):
     '''
-    Function that confirms the legitimacy of a NID number
+    Function that validates if the NID entered complies with the necessary format. If not, requests an NID again.
     '''
     while True:
         nid = input(message)
@@ -133,7 +145,7 @@ def nid_verification(message, list_customers_nid):
 
 def read_phone_number(message):
     '''
-    Function that confirms the legitimacy of a phone number.
+    Function that verifies a phone number's validity by determining whether it has nine digits.
     '''
     while True:
         entry = read_whole_positive(message)
@@ -147,7 +159,7 @@ def read_phone_number(message):
 
 def convert_lowercase(message):
     '''
-    Function
+    Function that requests and converts input string data to lowercase.
     '''
     string = input(message)
     string = string.lower()
@@ -155,7 +167,10 @@ def convert_lowercase(message):
 
 def print_menu():
     '''
-    Prints menu.
+    This function prints the program menu on the screen.
+    INPUT: None.
+    OUTPUT: Nane.
+    EXCEPTIONS: It does not raise exceptions.
     '''
     print("\n\n\n")
     print("******** MAIN MENU ********")
@@ -166,7 +181,13 @@ def print_menu():
 
 def show_menu():
     '''
-    Show menu.
+    This function displays the application menu on the screen. Asks to
+    select and type an option, it verifies that the option is correct.
+    Redisplays the menu if the selected option is incorrect.
+    It returns the integer of the selected option if the option is correct.
+    INPUT: None.
+    OUTPUT: An integer of the slected option.
+    EXCEPTIONS: No levanta excepciones.
     '''
     print_menu()
     option = read_integer("Please select an option (1-4): ")
@@ -179,14 +200,14 @@ def show_menu():
 
 def print_dictionary_equipment(dictionary):
     '''
-    Function that prints dictionary equipment.
+    Function that prints on the screen the key-value pairs of the dictionary with information about the equipment entered.
     '''
     for key in dictionary:
         print(key, ":", dictionary[key])
 
 def print_list_equipment(list_equipment):
     '''
-    Function that prints list of equipment.
+    Function that prints the list of equipment entered in tabulated form.
     '''
     if len(list_equipment) == 0:
         print("There are no items to display yet...")
@@ -204,12 +225,14 @@ def print_list_equipment(list_equipment):
 
 def register_equipment (num_id):
     '''
-    Function equipment registration.
+    Function that requests and checks the data entered for each registered
+    device or equipment. It makes a keyboard request for the new equipment's info.
+    It asks for the data, checks it, and if necessary, asks for it again.
     '''
 
-    equipment = {} # Dictionary equipment
+    equipment = {} # The equipment data is saved in a dictionary.
 
-    equipment['equipment_id'] = num_id + 1   # We assign the following integer
+    equipment['equipment_id'] = num_id + 1   # We assign the following integer.
     equipment['equipment_brand'] = read_brand("Please provide the lifting equipment's brand name (PALFINGER, KONE or SCHMALZ): ", allowedBrands)
     equipment['equipment_model'] = convert_lowercase("Please specify the model's name of the lifting apparatus: ")
     equipment['equipment_type'] = convert_lowercase("Please specify the equipment type: ")
@@ -218,8 +241,8 @@ def register_equipment (num_id):
     equipment['equipment_price_after_vat'] = equipment['equipment_price_before_vat'] + equipment['equipment_price_before_vat']*(VAT/100)
     equipment['equipment_units_in_stock'] = read_integer("Please specify the number of lifting equipment units that are currently in stock: ")
 
-    list_equipment.append(equipment)
-    list_equipment_id.append(equipment['equipment_id'])
+    list_equipment.append(equipment) # A list is created with the equipment entered.
+    list_equipment_id.append(equipment['equipment_id']) # Only the equipment's identifiers are entered to produce a list.
 
     print("\n")
     print_dictionary_equipment(equipment)
@@ -229,14 +252,15 @@ def register_equipment (num_id):
 
 def print_dictionary_customer(dictionary):
     '''
-    Function that prints customer dictionary.
+    Function that prints on the screen the key-value pairs of the
+    dictionary with information about customers.
     '''
     for key in dictionary:
         print(key, ":", dictionary[key])
 
 def print_list_customers(list_customers):
     '''
-    Function that prints list of customers.
+    Function that prints the list of customers entered in tabulated form.
     '''
     for header in list_customers[0].keys():
         print(header.upper().ljust(30), end = '\t')
@@ -250,10 +274,12 @@ def print_list_customers(list_customers):
 
 def register_customer():
     '''
-    Function that registers customer information.
+    Function that requests and checks the data entered for each registered customer.
+    It makes a keyboard request for the new customer's info.
+    It asks for the data, checks it, and if necessary, asks for it again.
     '''
 
-    customer = {} # Dictionary customer
+    customer = {} # Cusotomer data is saved in a dictionary.
 
     customer['name'] = convert_lowercase("Enter new customer's name: ")
     customer['first_surname'] = convert_lowercase("Fill in new customer's first surname: ")
@@ -262,28 +288,28 @@ def register_customer():
     customer['phone'] = read_phone_number("Type new customer's phone number with a 'NNNNNNNNN' format: ")
     customer['address'] = convert_lowercase("Fill in new customer's address: ")
 
-    list_customers.append(customer)
+    list_customers.append(customer) # A list is created with the registered customers.
 
     print("\n")
     print_dictionary_customer(customer)
 
 def new_list_customers_ordered(list_customers_nid_ordered_no_letter, list_customers, list_customers_nid_ordered, list_customers_ordered):
     '''
-    Function that rearranges list of customers in order.
+    A feature that lists customers in ascending order.
     '''
     for number in list_customers_nid_ordered_no_letter:
         for customer in list_customers:
             sequence = 'TRWAGMYFPDXBNJZSQVHLCKE'
-            string = str(number).zfill(8)
-            string = string + sequence[number%23]
-            if string == customer['nid']:
+            string = str(number).zfill(8) # Makes sure the leading zeros print on the screen.
+            string = string + sequence[number%23] # NID receives back again its letter.
+            if string == customer['nid']: # The customer list is sorted in ORDERED form.
                 list_customers_ordered.append(customer)
                 list_customers_nid_ordered.append(customer['nid'])
     return list_customers_ordered
 
 def print_new_list_customers_ordered(ordered_list):
     '''
-    Function that prints an ordered list of customers.
+    Prints the list of customers that was entered in tabular and ascending form.
     '''
     for header in ordered_list[0].keys():
         print(header.upper().ljust(30), end = '\t')
@@ -297,7 +323,7 @@ def print_new_list_customers_ordered(ordered_list):
 
 def show_rentals_data(list_customers_nid_ordered, list_equipment_id):
     '''
-    Function that shows rental information.
+    Function that prints on the screen the equipment and customers already registered in the system.
     '''
     print("\n\n")
     print("NEW LIFTING EQUIPMENT RENTAL")
@@ -309,7 +335,7 @@ def show_rentals_data(list_customers_nid_ordered, list_equipment_id):
 
 def read_register_identifier(message, list_equipment_id):
     '''
-    Function that verifies equipment's existance.
+    Function that checks if the equipment is registered or not in the system.
     '''
     while True:
         rental_id = read_integer(message)
@@ -321,7 +347,7 @@ def read_register_identifier(message, list_equipment_id):
 
 def read_register_nid_customer(message,list_customers_nid_ordered):
     '''
-    Function that verifies customers' existance.
+    Function that checks if the customer is registered or not in the system.
     '''
     while True:
         rental_customer = input(message).upper()
@@ -329,12 +355,12 @@ def read_register_nid_customer(message,list_customers_nid_ordered):
             return rental_customer
         else:
             print(f"Error, the customer must be registered in the system:: {list_customers_nid_ordered}. ")
-            print("Enter an existing lifting equipment identifier. ")
+            print("Enter an existing customer's NID ")
     return
 
 def format_date(message):
     '''
-    Function that verifies date format.
+    Date format verification function.
     '''
     while True:
         entry = input(message)
@@ -354,31 +380,31 @@ def format_date(message):
 
 def rental_equipment(list_equipment_id, list_customers_nid_ordered):
     '''
-    Function that prints an ordered list of customers.
+    Function that requests and checks the data entered for each rental.
     '''
 
     rental_equipment = {}
 
     rental_equipment['equipment_id'] = read_register_identifier("Insert lifting equipment identifier: ",list_equipment_id)
     rental_equipment['NID_Customer'] = read_register_nid_customer("Enter the client's ID who rents the lifting equipment: ",list_customers_nid_ordered)
-    rental_equipment['date_start'] = format_date("Please, enter a start date with a DD/MM/AAAA fromat: ")
-    rental_equipment['date_end'] = format_date("Please, enter an end date with a DD/MM/AAAA fromat: ")
+    rental_equipment['date_start'] = format_date("Please, enter a start date with a DD/MM/AAAA format: ")
+    rental_equipment['date_end'] = format_date("Please, enter an end date with a DD/MM/AAAA format: ")
     rental_equipment['price'] = read_whole_positive("Please, enter rental service price: ")
 
-    list_equipment_rentals.append(rental_equipment)
+    list_equipment_rentals.append(rental_equipment) # Rentals made are compiled into a list.
 
 def print_dictionary_rentals(list_equipment_rentals):
     '''
     Function that stores, orders and prints all rentals.
     '''
-    dictionary_rental = {}
+    dictionary_rental = {} # A dictionary is created to store the data of each rental.
 
     for equipment in list_equipment_rentals:
-        newkey = equipment['equipment_id']
+        newkey = equipment['equipment_id'] # The identifier of each piece of rented equipment will be the key of each key-value pair.
         dictionary_rental[newkey]=[]
     print("\n")
 
-    for equipment in list_equipment_rentals:
+    for equipment in list_equipment_rentals: # We store each rented equipment based on its equipment identifier.
         dictionary_rental[equipment['equipment_id']].append(equipment)
 
     print("################################################# RENTALS #####################################################")
@@ -392,7 +418,7 @@ def print_dictionary_rentals(list_equipment_rentals):
 
 def equipment_not_in_use(list_equipment_id, list_equipment_rentals):
     '''
-    Function that determines which equipment is still not in use
+    Function that determines which equipment has not been rented yet.
     '''
     list_used = []
 
@@ -410,33 +436,34 @@ def equipment_not_in_use(list_equipment_id, list_equipment_rentals):
 
 ###########################
 
+# Potential values included in a tuple.
 allowedBrands = ("palfinger", "kone", "schmalz")
 
-list_equipment = []
-list_equipment_id = []
-list_customers = []
-list_customers_nid = []
-list_customers_nid_ordered_no_letter = []
-list_customers_nid_ordered = []
-list_customers_ordered = []
-list_equipment_rentals = []
+list_equipment = [] # List containing the devices or equipment.
+list_equipment_id = [] # List containing the equipment identifiers.
+list_customers = [] # List containing customers.
+list_customers_nid = [] # List containing only the NIDs of the clients.
+list_customers_nid_ordered_no_letter = [] # List that contains the NIDs of the customers in an orderly manner and WITHOUT a verification letter.
+list_customers_nid_ordered = [] # List that contains the NIDs of the customers in an orderly manner and WITH a verification letter.
+list_customers_ordered = [] # List containing customer information in an ordered manner.
+list_equipment_rentals = [] # List containing information of the rental equipment.
 
 
 # Constants
-VAT = 16  # Consistently 16% VAT on all items
-num_id = 0 # When the program launches, it begins by numbering  from number 1
+VAT = 16  # Consistently 16% VAT on all items.
+num_id = 0 # When the program launches, it begins by numbering  from number 1.
 
-running = True # Determines whether we proceed through the menu or the user has selected option 4
+running = True # Determines whether we proceed through the menu or the user has selected option 4.
 while running:
-    option = show_menu() # Prints menu
-    if option == 1: # New lifting equipment registration
+    option = show_menu() # Prints menu.
+    if option == 1: # New lifting equipment data registration.
         print("\n")
         print_list_equipment(list_equipment)
         print("\n")
         print("*** ADD NEW LIFTING EQUIPMENT DATA: ***")
         num_id = register_equipment(num_id)
 
-    elif option == 2: # New customer data registration
+    elif option == 2: # New customer data registration.
         print("\n")
         print("*** ADD NEW CUSTOMER DATA: ***")
         register_customer()
@@ -445,7 +472,7 @@ while running:
         print_new_list_customers_ordered(list_customers_ordered)
         list_customers_ordered = []
 
-    elif option == 3:
+    elif option == 3: # New equipment rental data registration.
         print("\n")
         print("*** ADD NEW LIFTING EQUIPMENT RENTAL: ***")
 
@@ -463,7 +490,7 @@ while running:
             print("\n")
             equipment_not_in_use(list_equipment_id, list_equipment_rentals)
 
-    elif option == 4:
+    elif option == 4: # Program ends.
         running = False
 
 print("END")
