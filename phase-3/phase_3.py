@@ -1,7 +1,7 @@
 """
 Proyect status: COMPLETED
 
-Author: Jose Bello
+Author: Bello
 
 Phase 3: Storage and rental of products.
 
