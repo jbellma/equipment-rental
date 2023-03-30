@@ -386,7 +386,7 @@ def rental_equipment(list_equipment_id, list_customers_nid_ordered):
     rental_equipment = {}
 
     rental_equipment['equipment_id'] = read_register_identifier("Insert lifting equipment identifier: ",list_equipment_id)
-    rental_equipment['NID_Customer'] = read_register_nid_customer("Enter the client's ID who rents the lifting equipment: ",list_customers_nid_ordered)
+    rental_equipment['NID_Customer'] = read_register_nid_customer("Enter the client's NID who rents the lifting equipment: ",list_customers_nid_ordered)
     rental_equipment['date_start'] = format_date("Please, enter a start date with a DD/MM/AAAA format: ")
     rental_equipment['date_end'] = format_date("Please, enter an end date with a DD/MM/AAAA format: ")
     rental_equipment['price'] = read_whole_positive("Please, enter rental service price: ")
@@ -468,6 +468,7 @@ while running:
         print("*** ADD NEW CUSTOMER DATA: ***")
         register_customer()
         print("\n")
+        list_customers_nid_ordered = []
         new_list_customers_ordered(list_customers_nid_ordered_no_letter, list_customers, list_customers_nid_ordered, list_customers_ordered)
         print_new_list_customers_ordered(list_customers_ordered)
         list_customers_ordered = []
