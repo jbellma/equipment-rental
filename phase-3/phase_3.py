@@ -186,8 +186,8 @@ def show_menu():
     Redisplays the menu if the selected option is incorrect.
     It returns the integer of the selected option if the option is correct.
     INPUT: None.
-    OUTPUT: An integer of the slected option.
-    EXCEPTIONS: No levanta excepciones.
+    OUTPUT: An integer of the selected option.
+    EXCEPTIONS: It does not raise exceptions.
     '''
     print_menu()
     option = read_integer("Please select an option (1-4): ")
