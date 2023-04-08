@@ -72,7 +72,7 @@ Only one exception applies. The ***NID*** letter will be saved using the standar
 ### TASK 3: Storage of Lifting Equipment and Customer Information
 
 The program will enable the storage of numerous lifting devices and custumers (no limit).
-Equipment and customer data can be modified at any moment.
+
 
 - All equipment will be arranged in chronological order. Every time the user chooses to insert a new lifting equipment (***option 1***), the list of all existing equipment will be displayed.
 
