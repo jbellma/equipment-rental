@@ -74,7 +74,7 @@ Only one exception applies. The ***NID*** letter will be saved using the standar
 The program will enable the storage of numerous lifting devices and custumers (no limit).
 
 
-- All equipment will be arranged in chronological order. Every time the user chooses to insert a new lifting equipment (***option 1***), the list of all existing equipment will be displayed.
+All equipment will be arranged in chronological order. Every time the user chooses to insert a new lifting equipment (***option 1***), the list of all existing equipment will be displayed.
 
                             Please select an option from the menu: 1
                             ## LIFTING EQUIPMENT ##
@@ -88,9 +88,9 @@ The program will enable the storage of numerous lifting devices and custumers (n
                             Please provide the lifting equipment's brand name (PALFINGER, KONE or SCHMALZ):
                             
                          
-- Customers will always be arranged in accordance to their NID (from lowest to highest).
+Customers will always be arranged in accordance to their NID (from lowest to highest).
 
-  Every time the user inserts a new client, the program will check that one ***NID*** is not shared by more than one client. It will also show the complete list of clients in an orderly manner. ***NID*** number 12345678 precedes ***NID*** number 8765432.
+Every time the user inserts a new client, the program will check that one ***NID*** is not shared by more than one client. It will also show the complete list of clients in an orderly manner. ***NID*** number 12345678 precedes ***NID*** number 8765432.
   
   
                            *** INSERT NEW CUSTOMER DATA ***
